@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+
+}
+
+.shop-logo{
+    width: 35px;
+    height: 35px;
+}
+
+body {
+   font-family: 'Bodoni Moda', serif;
+}
+
+.shop-eleven-text{
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: 'Great Vibes', cursive;
+}
