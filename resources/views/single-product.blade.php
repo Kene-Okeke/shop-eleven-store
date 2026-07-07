@@ -12,8 +12,8 @@
 
 <!-- this is the nav bar section-->
         <nav>
-            <div>
-                <img src="/images/menu-bar.png" alt="menu-bar" class="menu-image-single">
+            <div class="menu-image-single">
+                <img src="/images/menu-bar.png" alt="menu-bar" >
             </div>
 
             <div class="logo">
@@ -28,7 +28,7 @@
                     <li><a href="">About</a></li>
                     <li><a href="">FAQ's</a></li>
                     <li class="single-cart-image">
-                        <img src="/images/cart-icon.png" alt="menu-icon" class="menu-bar">
+                        <img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar">
                     </li>
                     
                 </ul>
@@ -45,23 +45,32 @@
 
             <input type="Categories" class='categories-search-box' placeholder="Categories">
 
-            <span class="form-down-arrow">⌄</span>
+        <div class="first-arrow-background">
+             <h3 class="form-down-arrow">⌄</h3>
+        </div>
+           
 
         </form>
 
         <form action="" class="new-product-form">
 
-            <input type="New Product" placeholder="New Product">
-
-            <span class="form-down-arrow">⌄</span>
+            <input type="New Product" placeholder="New Product" class='product-search-box'>
+            
+            <div class="second-arrow-background">
+                <h3 class="form-down-arrow">⌄</h3>
+            </div>
+            
 
         </form>
 
         <form action="" class="search-form">
 
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="Search" class='third-search-box'>
 
-            <img src="images/search-icon.png" alt="search-icon">
+            <div class="search-icon-container">
+                 <img src="images/search-icon.png" alt="search-icon">
+            </div>
+           
 
         </form>
 
@@ -90,15 +99,17 @@
 
     <!-- This is the image on the left -->
 
-    <div class="image-left">
-        <img src="images/summer-vibes.JPG" alt="tote-bag">
-    </div>
+    <div class="product-two-column-wrapper">
 
-    <div class="single-product-details">
+         <div class="image-left">
+            <img src="images/summer-vibes.JPG" alt="tote-bag">
+        </div>
 
-        <div class="men-delivery-block">
+        <div class="single-product-details">
 
-            <div class="single-category-button">
+            <div class="men-delivery-block">
+
+                <div class="single-category-button">
                 <h3>Tote Bag</h3>
             </div>
 
@@ -106,7 +117,7 @@
 
             <span class="product-price">$24.99</span>
 
-            <div>
+            <div class="caution">
                 <img src="images/caution-icon.png" alt="caution-sign">
                 <span> Free delivery at the University of Ghana </span>
             </div>
@@ -115,18 +126,24 @@
 
         <div class="select-color-section">
 
-            <h3>Select Color</h3>
+            <h3 class="color-text">Select Color</h3>
 
             <div class="color-options">
                 <span>green</span>
                 <span>blue</span>
                 <span>pink</span>
+                <span>black</span>
+                <span>brown</span>
+                
             </div>
             
             <div class="Addtocart">
 
-                <div class="addtocart-button"> Add to Cart </div>
-                <span class="heart-emoji">♡</span>
+                <div class="addtocart-button"> 
+                    <h3> Add to Cart</h3>
+                 </div>
+                
+                 <span class="heart-emoji">♡</span>
                 
             </div>
 
@@ -134,26 +151,26 @@
 
         <div class="description-section">
 
-            <div class="Description & Fit">
+            <div class="Description-and-Fit">
 
                 <h1 class="title">Description & Fit</h1>
-                <img src="images/slide-up-arrow.png"alt="slide-up-arrow">
+                <img src="images/slide-up-arrow.png" alt="slide-up-arrow">
 
             </div>
 
            
 
-            <p>Stylish tote bag in durable, lightweight fabric with a spacious design <br>
-                and a clean, modern silhouette. Features sturdy shoulder straps, an open main compartment, <br>
-                and ample room for everyday essentials. Perfect for work, <br>
-                shopping, or casual outings. Soft, versatile, and designed for effortless everyday carry. <br>
+            <p>Stylish tote bag in durable, lightweight fabric with a spacious design and a clean, <br>
+                modern silhouette. Features sturdy shoulder straps, an open main compartment,and <br>
+                ample room for everyday essentials. Perfect for work, shopping, or casual outings. <br>Soft, versatile, 
+                and designed for effortless everyday carry. <br>
             </p>
 
         </div>
 
-        <div class="shipping and delivery details">
+        <div class="shipping-and-delivery-details">
 
-            <div class="Shipping and arrow">
+            <div class="Shipping-and-arrow">
 
                 <h1 class="shipping-text">Shipping</h1>
                 <img src="images/slide-up-arrow.png"alt="slide-up-arrow">
@@ -189,6 +206,8 @@
 
 
                 </div>
+
+             </div>
 
             <div class="delivery-and-estimation-flexbox">
 
@@ -228,6 +247,11 @@
     </div>
 
 
+    
+    </div>
+
+   
+
 </div>
 
 <!--THIS IS THE RATINGS AND REVIEWS SECTION-->
@@ -256,28 +280,63 @@
             <div class="rating-widgets">
 
                 <div class="ratings-bar">
-                    <span>⭐️5</span>
-                    <div class="fill" style="width:80%;"></div>
+                    <div class="star-conatiner">
+                        <span>⭐️ 5</span>
+                    </div>
+                    
+                    <div class="fill-container">
+
+                         <div class="fill" style="width:80%;"></div>
+
+                    </div>
+                   
                 </div>
 
                 <div class="ratings-bar">
-                    <span>⭐️4</span>
-                    <div class="fill" style="width:20%;"></div>
+                    <div class="star-conatiner">
+                        <span>⭐️ 4</span>
+                    </div>
+                
+                <div class="fill-container">
+                     <div class="fill" style="width:20%;"></div>
+
+                </div>
+                   
                 </div>
 
                 <div class="ratings-bar">
-                    <span>⭐️3</span>
-                    <div class="fill" style="width:10%;"></div>
+
+                    <div class="star-conatiner">
+                        <span>⭐️ 3</span>
+                    </div>
+                
+                   <div class="fill-container">
+                     <div class="fill" style="width:10%;"></div>
+
+                    </div>
                 </div>
 
                 <div class="ratings-bar">
-                    <span>⭐️2</span>
-                    <div class="fill" style="width:5%;"></div>
+
+                     <div class="star-conatiner">
+                        <span>⭐️ 2</span>
+                    </div>
+
+                    <div class="fill-container">
+                     <div class="fill" style="width:5%;"></div>
+
+                    </div>
                 </div>
 
                 <div class="ratings-bar">
-                    <span>⭐️1</span>
-                    <div class="fill" style="width:2%;"></div>
+                    <div class="star-conatiner">
+                        <span>⭐️ 1</span>
+                    </div>
+
+                    <div class="fill-container">
+                     <div class="fill" style="width:3%;"></div>
+
+                    </div>
                 </div>
 
             </div>
@@ -288,7 +347,7 @@
             <span>Okeke Kene</span>
 
             <div class="date-flex">
-                <span>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</span>
+                <span>⭐️    ⭐️    ⭐️    ⭐️    ⭐️</span>
                 <h3>2 July 2026</h3>
             </div>
 
@@ -298,9 +357,9 @@
                     The customer service was excellent, and the products exceeded my expectations."
                 </h3>
 
-                <span class="right-arrow">
+                <div class="right-arrow">
                     <img src="images/right-arrow.png" alt="right-arrow">
-                </span>
+                </div>
 
             </div>
 
@@ -323,29 +382,29 @@
     <h1>You might also like</h1>
 
     <div class="might-like-images">
-        <div>
+        <div class="image">
             <img src="images/powerbank.jpg" alt="powerbank">
 
-            <span>Green 100Hz Powerbank</span>
-            <span>100gh</span>
+            <span style="font-weight:900; font-size:17px; padding-top:13px">Green 100Hz Powerbank</span>
+            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
         </div>
-        <div>
-            <img src="images/pink-summer-vibes" alt="pink-bag">
+        <div class="image">
+            <img src="images/pink-summer-vibes.jpg" alt="pink-bag">
 
-            <span>Pink Summer Vibes Tote bag</span>
-            <span>100gh</span>
+            <span style="font-weight:900; font-size:17px; padding-top:13px">Pink Summer Vibes Tote bag</span>
+            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
         </div>
-        <div>
+        <div class="image">
             <img src="images/hotplate.jpg" alt="hot-plate">
 
-            <span>Hot-plate Cooker</span>
-            <span>350gh</span>
+            <span style="font-weight:900; font-size:17px; padding-top:13px">Hot-plate Cooker</span>
+            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">350gh</span>
         </div>
-        <div>
+        <div class="image">
             <img src="images/bedtables.jpg" alt="bedtables">
 
-            <span>Bed Study Table</span>
-            <span>100gh</span>
+            <span style="font-weight:900; font-size:17px; padding-top:13px">Bed Study Table</span>
+            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
         </div>
     </div>
 </div>
