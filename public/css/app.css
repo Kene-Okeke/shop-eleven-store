@@ -534,25 +534,9 @@ nav{
    
 }
 
-.single-product-nav{
-    margin-top: 20px;
-}
+
  
-.right-nav-items{
-    display: flex;
-    gap: 30px;
-    list-style: none;
 
-}
-
-.right-nav-items a{
-    text-decoration: none;
-    color: black;
-}
-
-.single-product-nav{
-    display: flex;
-}
 
 .ul {
     

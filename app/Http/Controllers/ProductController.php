@@ -4,87 +4,64 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Services\CloudinaryService;
 
 class ProductController extends Controller
 {
-    //This is the function to return JSON data for all products(in simple terms get all products)
+    protected $cloudinaryService;
+
+    public function __construct(CloudinaryService $cloudinaryService){
+
+            $this->cloudinaryService = $cloudinaryService;
+        }
+
+
+    //This is the function to return blade data for all products(in simple terms get all products)
     public function index(){
 
         //Get all products with their categories
         $products = Product::with('category')->get();
-
-        return response() ->json([
-            'success' => true,
-            'message' => 'Products retrieved successfully',
-            'data' => $products
-        ]);
+        return view('shop', compact('products'));
     }
 
     //Get single product by ID
     public function show($id){
-        $product = Product::with('category') ->find($id);
+        $product = Product::with('category')->findOrFail($id);
 
-        //if products don't exist
-        if(!$product){
-            return response()->json([
-                'success' => false,
-                'message' => 'Product not found'
-            ],404); //404 is the https code for not found - if this is not added the browser thinks the response is always successful since data is received 
-        }
-
-        return response()->json([
-            'success' => true,
-            'message'=> 'Product retrieved successfully',
-            'data' => $product
-        ]);
+        return view('single-product', compact('product'));
     }
 
-    //Get product by category
-    public function byCategory($categoryId){
-        $products = Product::where('category_id', $categoryId)
-                 -> with('category')
-                 ->get();
+    //return the view to create a new product
+    public function create(){
 
-        if($products->isEmpty()){
-            return response()->json([
-                'success' => false,
-                'message' => 'There are no Products in this category'
-            ],404);
-        }
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Products retrieved successfully',
-            'data' => $products
-        ]);
-
+        $categories = Category::all();
+        
+        return view('admin.products.create');
     }
 
-    //Search Products
-    public function search(Request $request){
-
-        $query = $request->query('q'); 
-
-        if(!query){
-            return response()->json([
-                'success'=> false,
-                'message'=>'Search query is required'
-            ],400);
-        }
-
-        $products = Product::where('name','like',"%$query%")
-                           ->orWhere('description','like',"%$query%")
-                           ->with('category')
-                           ->get();
-
-        return response()->json([
-            'success'=> true,
-            'message'=> 'Search results',
-            'data' => $products,
-            'count' => $products->count()
+    //here is the function that stores our product data to the database on create
+    public function store(Request $request){
+       
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric',
+            'stock_quantity' => 'required|integer',
+            'image'=> 'required|image',
         ]);
+
+        $imageUrl = $this->cloudinaryService->upload($request->image);
+
+        Product::create([
+            'name' => $validated['name'],
+            'description' => $validated['description'],
+            'price' => $validated['price'],
+            'stock_quantity' => $validated['stock_quatity'],
+            'image_url' => $imageUrl,
+        ]);
+
+        return redirect()->back()->with('success', 'Product created successfully');
+
     }
-
-
     
 }
