@@ -9,50 +9,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Create New Product</h1>
+    
+    <div class="create-form-container">
 
-    <form action='/admin/products/' method="POST" enctype="multipart/form-data">
+        <h1 class="create_text">Create New Product</h1>
+
+        <form action='/admin/products/' method="POST" enctype="multipart/form-data" class="create-product-form">
 
         @csrf
+        <div class="Productlabel_Input">
 
-        <label for="Product-Name">Product name</label>
-        <input type="text" id="Product-Name" name="name"> <br> 
+            <label for="Product-Name">Product name</label>
+            <input type="text" id="Product-Name" name="name"> <br> 
 
-        <label for="Description">Description</label>
-        <input type="text" id="Description" name="description"> <br>
+        </div>
+        
+        <div class="descriptionlabelandInput">
 
-        <label for="Category">Category</label>
+            <label for="Description">Description</label>
+            <textarea type="text" id="Description" name="description" > </textarea> <br>
+        </div>
+        
+        <div class="category_dropdown">
+            <label for="Category">Category</label>
 
-        <select name="category_id">
+     
+            <select name="category_id">
 
-            <option value="">Select Category</option>
+                <option value="">Select Category</option>
 
-            @foreach($categories as category)
+                @foreach($categories as $category)
 
-                <option value="{{$category->id}}">
-                    {{ $category->name}}
-            </option>
+                    <option value="{{$category->id}}">
+                    {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
 
-        </select>
+        </div>
+        
 
-        <button type="button" data-bs-toggle="modal" data-bs-target="#categoryModal">
+        <button type="button" id ="openCategoryModal">
             + Add Category
-        </button>
+        </button><br>
 
-        <label for="Price">Price</label>
-        <input type="number" id="Price" name="price"> <br>
+        <div class="price-container">
+            <label for="Price">Price</label>
+            <input type="number" id="Price" name="price"> <br>
+        </div>
+        
 
         <label for="Stock-Quantity">Stock Quantity</label>
         <input type="number" id="Stock-Quantity" name="stock_quantity"> <br>
+        
+        <div class="upload-image-container">
+            <label for="Image">Image</label>
+            <input type="file" id="Image" name="image"> <br>
+        </div>
+        
 
-        <label for="Image">Image</label>
-        <input type="file" id="Image" name="image"> <br>
-
-        <button type="submit">
+        <button type="submit" class="product_submit">
             Create Product
         </button>
-    </form>
+        </form>
 
-    @include('admin.categories.create-modal')
+
+    </div>
+
+    
+
+    @include('admin.categories.create-modal') 
+    @vite('resources/js/admin/create_product.js')
 </body>
 </html>

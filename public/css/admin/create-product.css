@@ -1,0 +1,136 @@
+.close_and_title_container {
+    display: flex;
+    width: 300px;
+    gap: 30px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.category-label-container{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#category-name{
+    width: 200px;
+}
+
+body {
+   font-family: 'Bodoni Moda', serif;
+}
+
+.description-label-container {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#category-description{
+    height: 100px;
+    width: 300px;
+}
+
+.create_text{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Added modal behavior */
+#categoryModal{
+    display: none; /* hidden by default */
+
+    position: fixed; /* floats above the page */
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5); /* dark overlay */
+
+    z-index: 1000;
+}
+
+
+/* Added because the pink box is now inside the modal */
+.category-modal-content {
+
+    padding: 40px;
+    background-color: #FF4D8D;
+    width: 400px;
+    border-radius: 25px;
+    color: white;
+
+    margin: 100px auto;
+}
+
+
+#closeCategoryModal{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submit_category{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.create-form-container{
+    padding: 20px;
+    background-color: brown;
+    width: 300px;
+    color: white;
+    border-radius: 20px;
+}
+
+.Productlabel_Input{
+    padding-bottom: 10px;
+}
+
+.descriptionlabelandInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.category_dropdown{
+     padding-bottom: 10px;
+}
+
+body{
+    padding: 20px;
+}
+
+.price-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.upload-image-container{
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.create-form-container input{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.product_submit{
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#Description{
+    height: 10vh;
+}

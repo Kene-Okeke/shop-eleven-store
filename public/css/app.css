@@ -534,10 +534,74 @@ nav{
    
 }
 
+.close_and_title_container {
+    display: flex;
+    width: 300px;
+    gap: 30px;
+    padding-bottom: 10px;
+    align-items: center;
+}
 
- 
+.category-label-container{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#category-name{
+    width: 200px;
+}
+
+.description-label-container {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#category-description{
+    height: 100px;
+    width: 300px;
+}
 
 
-.ul {
-    
+/* Added modal behavior */
+.category-modal{
+    display: none; /* hidden by default */
+
+    position: fixed; /* floats above the page */
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5); /* dark overlay */
+
+    z-index: 1000;
+}
+
+
+/* Added because the pink box is now inside the modal */
+.category-modal-content {
+
+    padding: 40px;
+    background-color: #FF4D8D;
+    width: 400px;
+    border-radius: 25px;
+    color: white;
+
+    margin: 100px auto;
+}
+
+
+#closeCategoryModal{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submit_category{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }

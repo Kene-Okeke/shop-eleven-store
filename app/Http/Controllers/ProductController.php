@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 use App\Services\CloudinaryService;
 
 class ProductController extends Controller
@@ -36,7 +37,7 @@ class ProductController extends Controller
 
         $categories = Category::all();
         
-        return view('admin.products.create');
+        return view('admin.products.create',compact('categories'));
     }
 
     //here is the function that stores our product data to the database on create
@@ -56,7 +57,7 @@ class ProductController extends Controller
             'name' => $validated['name'],
             'description' => $validated['description'],
             'price' => $validated['price'],
-            'stock_quantity' => $validated['stock_quatity'],
+            'stock_quantity' => $validated['stock_quantity'],
             'image_url' => $imageUrl,
         ]);
 

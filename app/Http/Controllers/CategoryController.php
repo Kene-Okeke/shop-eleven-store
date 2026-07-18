@@ -9,7 +9,8 @@ class CategoryController extends Controller
 {
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        try{
+             $validated = $request->validate([
             'name'=> 'required|string|max:255|unique:categories,name',
             'description'=> 'nullable|string'
         ]);
@@ -17,9 +18,21 @@ class CategoryController extends Controller
         $category =  Category::create($validated);
        
         return response()->json([
-            'id' => $category->id,
-            'name'=> $category->name,
+            'success' => true,
+            'message' => 'Category created successfully',
+            'category' => [
+                'id' => $category->id,
+                'name'=> $category->name,
+            ]
+            
         ]);
+        } catch(\Exception $e){
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ], 400);
+        }
+       
 
     }
 }

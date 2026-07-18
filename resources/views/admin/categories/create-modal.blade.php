@@ -1,51 +1,75 @@
-<!-- this is the front end for the create category modal-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Category</title>
-    <script src="resources/js/category.js"></script>
-</head>
-<body>
-    <div class="category-modal" id="categoryModal">
 
-    <h2>Create Category</h2>
+<!-- category modal component -->
 
-    <form action="/admin/categories" method="POST" id="categoryForm" >
+<div class="category-modal" id="categoryModal">
 
-        <div class = "create-result"></div>
+    <div class="category-modal-content">
 
-        @csrf
+        <div class="close_and_title_container">
 
-        <label for="category-name">Category Name</label>
+            <button type="button" id="closeCategoryModal">
+                ×
+            </button>
 
-        <input type="text" id="category-name" name="name" placeholder="Enter category name">
+            <h2>Create Category</h2>
 
-        @error('name')
-            <p>{{ $message }}</p>
-        @enderror
+        </div>
 
 
+        <form action="/admin/categories" method="POST" id="categoryForm">
 
-        <label for="category-description">Category Description</label>
+            <div class="create-result"></div>
 
-        <textarea type="text" id="category-description" name="description" placeholder="Enter category description"></textarea>
+            @csrf
 
-        @error('description')
-            <p>{{ $message }}</p>
-        @enderror
+            <div class="category-label-container">
 
-        <button type="submit">
-            Create Category
-        </button>
+                <label for="category-name">
+                    Category Name
+                </label>
+
+                <input 
+                    type="text" 
+                    id="category-name" 
+                    name="name" 
+                    placeholder="Enter category name"
+                >
+
+            </div>
 
 
+            @error('name')
+                <p>{{ $message }}</p>
+            @enderror
 
-    </form>
+
+            <div class="description-label-container">
+
+                <label for="category-description">
+                    Category Description
+                </label>
+
+                <textarea 
+                    id="category-description" 
+                    name="description" 
+                    placeholder="Enter category description">
+                </textarea>
+
+            </div>
+
+
+            @error('description')
+                <p>{{ $message }}</p>
+            @enderror
+
+
+            <button class="submit_category" type="submit">
+                Create Category
+            </button>
+
+
+        </form>
+    @vite('resources/js/category.js')
+    </div>
 
 </div>
-</body>
-</html>
-
-
