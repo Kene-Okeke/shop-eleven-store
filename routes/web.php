@@ -2,6 +2,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -16,6 +17,10 @@ Route::get('/product', function () {
 
 Route::get('/admin/products/create',[ProductController::class, 'create']);
 
-Route::get('/admin/categories',[CategoryController::class,'store']);
+Route::post('/admin/categories',[CategoryController::class,'store']);
 
 Route::post('/admin/products/',[ProductController::class, 'store']);
+
+Route::get('/admin/categories/create-modal', function(){
+    return view('admin.categories.create-modal');
+});

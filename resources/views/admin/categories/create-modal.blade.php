@@ -1,12 +1,20 @@
 <!-- this is the front end for the create category modal-->
-
-
-
-<div class="category-modal" id="categoryModal">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Category</title>
+    <script src="resources/js/category.js"></script>
+</head>
+<body>
+    <div class="category-modal" id="categoryModal">
 
     <h2>Create Category</h2>
 
     <form action="/admin/categories" method="POST" id="categoryForm" >
+
+        <div class = "create-result"></div>
 
         @csrf
 
@@ -37,3 +45,7 @@
     </form>
 
 </div>
+</body>
+</html>
+
+
