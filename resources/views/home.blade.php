@@ -15,7 +15,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="#about">Shop</a></li>
+                <li><a href="/shop">Shop</a></li>
                 <li><a href="#Account">Account</a></li>
                 <li><a href="#Cart">Cart</a></li>
             </ul>
@@ -125,23 +125,32 @@
                         <span class="Hand Creams">Hand Creams</span>
                     </div>
 
-                    <div class = "selected-items">
-                        <div class = "cat-column-1" style="background-image: url('{{ asset('images/summer-vibes.JPG') }}');">
-                            <div class = "product-details-cont">
-                                <div class = "details">
-                                    <h1>Tote-Bags</h1>
-                                    <h3>100gh</h3>
-                                </div>
 
-                                <div>
-                                    <img src="/images/cart-icon.png" alt="cart-icon" class = "cart-icon">
+
+                    <div class = "selected-items">
+                        @foreach($popularProducts as $product)
+                        <a href="/products/{{ $product->id }}"> 
+                            <div class = "cat-column-1" style="background-image: url('{{ $product->image_url }}');">
+
+                                <div class = "product-details-cont">
+
+                                    <div class = "details">
+                                        <h1>{{$product->category->name}}</h1>
+                                        <h3>GH₵{{$product->price}}</h3>
+                                    </div>
+
+                                     <div>
+                                        <img src="/images/cart-icon.png" alt="cart-icon" class = "cart-icon">
+                                    </div>
+
                                 </div>
 
                             </div>
+                        </a>
+                        @endforeach
+                        
 
-                        </div>
-
-                        <div class = "cat-column-2" style="background-image: url('{{ asset('images/black-bag.JPG') }}');">
+                       <!-- <div class = "cat-column-2" style="background-image: url('{{ asset('images/black-bag.JPG') }}');">
                             <div class = "product-details-cont">
                                 <div class = "details">
                                     <h1>Tote-Bags</h1>
@@ -169,7 +178,7 @@
 
                             </div>
 
-                        </div>
+                        </div> !-->
 
                     </div>
 

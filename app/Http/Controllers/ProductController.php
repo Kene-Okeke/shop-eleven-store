@@ -22,7 +22,10 @@ class ProductController extends Controller
 
         //Get all products with their categories
         $products = Product::with('category')->get();
-        return view('shop', compact('products'));
+
+        //Get all categories
+        $categories = Category::all();
+        return view('shop', compact('products','categories'));
     }
 
     //Get single product by ID
@@ -42,13 +45,18 @@ class ProductController extends Controller
 
     //here is the function that stores our product data to the database on create
     public function store(Request $request){
+
+        
        
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric',
             'stock_quantity' => 'required|integer',
             'image'=> 'required|image',
+            'is_featured'=> 'nullable|boolean',
+
         ]);
 
         $imageUrl = $this->cloudinaryService->upload($request->image);
@@ -56,9 +64,11 @@ class ProductController extends Controller
         Product::create([
             'name' => $validated['name'],
             'description' => $validated['description'],
+            'category_id' => $validated['category_id'],
             'price' => $validated['price'],
             'stock_quantity' => $validated['stock_quantity'],
             'image_url' => $imageUrl,
+            'is_featured'=> $request->boolean('is_featured'),
         ]);
 
         return redirect()->back()->with('success', 'Product created successfully');

@@ -68,7 +68,7 @@
             <input type="search" placeholder="Search" class='third-search-box'>
 
             <div class="search-icon-container">
-                 <img src="images/search-icon.png" alt="search-icon">
+                 <img src="/images/search-icon.png" alt="search-icon">
             </div>
            
 
@@ -102,7 +102,7 @@
     <div class="product-two-column-wrapper">
 
          <div class="image-left">
-            <img src="images/summer-vibes.JPG" alt="tote-bag">
+            <img src="{{$product->image_url}}" alt="tote-bag">
         </div>
 
         <div class="single-product-details">
@@ -110,15 +110,15 @@
             <div class="men-delivery-block">
 
                 <div class="single-category-button">
-                <h3>Tote Bag</h3>
+                <h3>{{ $product->category->name }}</h3>
             </div>
 
-            <h1> Green Tote Bag</h1>
+            <h1>{{$product->name}}</h1>
 
-            <span class="product-price">$24.99</span>
+            <span class="product-price">GH₵{{$product->price}}</span>
 
             <div class="caution">
-                <img src="images/caution-icon.png" alt="caution-sign">
+                <img src="/images/caution-icon.png" alt="caution-sign">
                 <span> Free delivery at the University of Ghana </span>
             </div>
 
@@ -154,16 +154,13 @@
             <div class="Description-and-Fit">
 
                 <h1 class="title">Description & Fit</h1>
-                <img src="images/slide-up-arrow.png" alt="slide-up-arrow">
+                <img src="/images/slide-up-arrow.png" alt="slide-up-arrow">
 
             </div>
 
            
 
-            <p>Stylish tote bag in durable, lightweight fabric with a spacious design and a clean, <br>
-                modern silhouette. Features sturdy shoulder straps, an open main compartment,and <br>
-                ample room for everyday essentials. Perfect for work, shopping, or casual outings. <br>Soft, versatile, 
-                and designed for effortless everyday carry. <br>
+            <p>{{$product->description}}<br>
             </p>
 
         </div>
@@ -173,7 +170,7 @@
             <div class="Shipping-and-arrow">
 
                 <h1 class="shipping-text">Shipping</h1>
-                <img src="images/slide-up-arrow.png"alt="slide-up-arrow">
+                <img src="/images/slide-up-arrow.png"alt="slide-up-arrow">
 
             </div>
 
@@ -182,7 +179,7 @@
                 <div class="discount-block">
 
                     <div class="discount-image">
-                        <img src="images/discount-icon.png" alt="discount-icon">
+                        <img src="/images/discount-icon.png" alt="discount-icon">
                     </div>
 
                     <div class="discount-text">
@@ -196,7 +193,7 @@
                 <div class="package-block">
 
                     <div class="package-image">
-                        <img src="images/package-icon.png" alt="package-icon">
+                        <img src="/images/package-icon.png" alt="package-icon">
                     </div>
 
                     <div class="package-text">
@@ -214,7 +211,7 @@
                 <div class="delivery-time-block">
 
                     <div class="delivery-image">
-                        <img src="images/delivery-icon.png" alt="delivery-icon">
+                        <img src="/images/delivery-icon.png" alt="delivery-icon">
                     </div>
 
                     <div class="delivery-text">
@@ -228,7 +225,7 @@
                 <div class="Estimation-block">
 
                     <div class="estimation-image">
-                        <img src="images/arrival-icon.png" alt="arrival-icon">
+                        <img src="/images/arrival-icon.png" alt="arrival-icon">
                     </div>
 
                     <div class="estimation-text">
@@ -358,13 +355,13 @@
                 </h3>
 
                 <div class="right-arrow">
-                    <img src="images/right-arrow.png" alt="right-arrow">
+                    <img src="/images/right-arrow.png" alt="right-arrow">
                 </div>
 
             </div>
 
             <div class="image-of-reviewer">
-                <img src="images/review-picture.png" alt="reviewer-image">
+                <img src="/images/review-picture.png" alt="reviewer-image">
 
             </div>
 
@@ -383,25 +380,25 @@
 
     <div class="might-like-images">
         <div class="image">
-            <img src="images/powerbank.jpg" alt="powerbank">
+            <img src="/images/powerbank.jpg" alt="powerbank">
 
             <span style="font-weight:900; font-size:17px; padding-top:13px">Green 100Hz Powerbank</span>
             <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
         </div>
         <div class="image">
-            <img src="images/pink-summer-vibes.jpg" alt="pink-bag">
+            <img src="/images/pink-summer-vibes.jpg" alt="pink-bag">
 
             <span style="font-weight:900; font-size:17px; padding-top:13px">Pink Summer Vibes Tote bag</span>
             <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
         </div>
         <div class="image">
-            <img src="images/hotplate.jpg" alt="hot-plate">
+            <img src="/images/hotplate.jpg" alt="hot-plate">
 
             <span style="font-weight:900; font-size:17px; padding-top:13px">Hot-plate Cooker</span>
             <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">350gh</span>
         </div>
         <div class="image">
-            <img src="images/bedtables.jpg" alt="bedtables">
+            <img src="/images/bedtables.jpg" alt="bedtables">
 
             <span style="font-weight:900; font-size:17px; padding-top:13px">Bed Study Table</span>
             <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
@@ -415,7 +412,7 @@
 
             <div class="footer-column-a">
                 <div class="logo-footer" style="margin-top:13px;">
-                    <img src="images/shopelevenlogo.png" alt="shop-logo" >
+                    <img src="/images/shopelevenlogo.png" alt="shop-logo" >
                     <h1 class="shop-text">ShopEleven</h1>
 
                 </div>
@@ -423,10 +420,10 @@
                 <h1 class="footer-tagline" style="font-size:12px;">Explore our most-loved <br>collection of stylish home </h1>
 
                 <div class="social-icons">
-                    <img src="images/instagram-icon.png" alt="instagram-icon">
-                    <img src="images/snapchat-icon.png" alt="snapchat-icon">
-                    <img src="images/whatsapp-icon.png" alt="whatsapp-icon">
-                    <img src="images/tiktok-icon.png" alt="tiktok-icon">
+                    <img src="/images/instagram-icon.png" alt="instagram-icon">
+                    <img src="/images/snapchat-icon.png" alt="snapchat-icon">
+                    <img src="/images/whatsapp-icon.png" alt="whatsapp-icon">
+                    <img src="/images/tiktok-icon.png" alt="tiktok-icon">
                 
                 </div>
 

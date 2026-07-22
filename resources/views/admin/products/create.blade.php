@@ -14,6 +14,21 @@
 
         <h1 class="create_text">Create New Product</h1>
 
+        @if(session('success'))
+
+            <div class="success-message">
+                {{session('success')}}
+            </div>
+        @endif
+
+        @if($errors->any())
+            <div class="error-message">
+                @foreach($errors->all() as $error)
+                    <p>{{error}}</p>
+                @endforeach
+            </div>
+        @endif
+
         <form action='/admin/products/' method="POST" enctype="multipart/form-data" class="create-product-form">
 
         @csrf
@@ -66,6 +81,14 @@
             <label for="Image">Image</label>
             <input type="file" id="Image" name="image"> <br>
         </div>
+
+        <div class="featured-product">
+            <label>
+                <input type ="checkbox" name="is_featured" value="1">
+                Add to Popular Collection
+            </label>
+        </div>
+        
         
 
         <button type="submit" class="product_submit">

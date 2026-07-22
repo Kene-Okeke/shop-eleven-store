@@ -8,6 +8,8 @@ body {
    font-family: 'Bodoni Moda', serif;
 }
 
+
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -757,6 +759,8 @@ body {
     border-width: 1.5px;
     border-radius: 25px;
     padding: 15px;
+    max-width: 700px;
+    line-height: 1.8;
    
 }
 
@@ -887,4 +891,92 @@ body {
     border-color: rgb(230, 230, 230);
     border-width: 1.5px;
     border-radius: 25px;
+}
+
+.categoryAndShopcont{
+    display: flex;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.category-column{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.product-container img{
+    height: 280px;
+    width: 290px;
+}
+
+.product-container{
+    border-style: solid;
+    border-color: #8B5E3C;
+    border-width: 2.5px;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.product-container h1{
+    font-size: 23px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+   
+}
+
+.pricexcart{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+   
+
+}
+
+.pricexcart img{
+    width: 30px;
+    height: 30px;
+}
+
+.Pricebutton-container{
+    background-color: deeppink;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.image-container{
+     border-style: solid;
+    border-color: rgb(230, 230, 230);
+    border-width: 1.5px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.cart-cont img{
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;
+    border-radius: 50%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.shop-list-column{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 80px;
 }

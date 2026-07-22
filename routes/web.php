@@ -7,9 +7,9 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/product/{id}', [ProductController::class, 'show']);
+Route::get('/products/{id}', [ProductController::class, 'show']);
 
-Route::get('/products', [ProductController::class, 'index']);
+Route::get('/shop', [ProductController::class, 'index']);
 
 Route::get('/product', function () {
     return view('single-product');
@@ -24,3 +24,6 @@ Route::post('/admin/products/',[ProductController::class, 'store']);
 Route::get('/admin/categories/create-modal', function(){
     return view('admin.categories.create-modal');
 });
+
+
+

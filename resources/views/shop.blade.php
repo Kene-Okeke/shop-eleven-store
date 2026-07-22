@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/single-product.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
@@ -88,8 +88,61 @@
 </section>
 
 <section class="back-arrow">
-    <span>← Home . Product details</span>
+    <span>← Home </span>
 </section>
+
+<!-- this categoryAndShopcont is the 2 column structure for where products will be listed !-->
+ 
+<div class="categoryAndShopcont">
+
+    <div class="category-column">
+
+        <h1>Category</h1>
+
+        <label>
+            <input type="checkbox" name="all-products">
+            All Products
+        </label>
+        @foreach($categories as $category)
+        <label>
+            <input type="checkbox" name="product-category">
+            {{ $category->name }}
+        </label>
+        @endforeach
+       
+         
+
+    </div>
+    <div class="shop-list-column">
+
+        <!-- product card--> 
+         @foreach($products as $product)
+         <a href="/products/{{$product->id}}" class="product-link">
+         <div class="product-container">
+
+            <div class="image-container">
+                 <img class="product-img" src="{{ $product->image_url }}" alt="product-image">
+            </div>
+           
+            <h1 class="product-text">{{$product->name}}</h1>
+
+            <div class="pricexcart">
+
+                <div class="Pricebutton-container">
+                   <h1 style="font-size:15px; padding-top:13px;">GH₵ {{ $product->price }}</h1> 
+                </div>
+
+                <div class="cart-cont">
+                    <img src="/images/cart-icon.png" alt="cart-icon">
+                </div>
+               
+            </div>
+         </div>
+        </a>
+         @endforeach
+        
+    </div>
+</div>
 
 </body>
 </html>
