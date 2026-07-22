@@ -64,7 +64,7 @@
 
         <form action="" class="search-form">
 
-            <input type="search" placeholder="Search" class='third-search-box'>
+            <input type="search" placeholder="Search" class='third-search-box' id ="search-input">
 
             <div class="search-icon-container">
                  <img src="images/search-icon.png" alt="search-icon">
@@ -99,13 +99,12 @@
 
         <h1>Category</h1>
 
-        <label>
-            <input type="checkbox" name="all-products">
-            All Products
+       <label>
+         <a href="/shop">All Products</a>
         </label>
         @foreach($categories as $category)
         <label>
-            <input type="checkbox" name="product-category">
+            <input type="radio" name="product-category" class="category-filter" value="{{$category->id}}">
             {{ $category->name }}
         </label>
         @endforeach
@@ -113,7 +112,7 @@
          
 
     </div>
-    <div class="shop-list-column">
+    <div class="shop-list-column" id="product-list">
 
         <!-- product card--> 
          @foreach($products as $product)
@@ -144,5 +143,69 @@
     </div>
 </div>
 
+<div class="footer-section">
+
+            <div class="footer-column-a">
+                <div class="logo-footer" style="margin-top:13px;">
+                    <img src="/images/shopelevenlogo.png" alt="shop-logo" >
+                    <h1 class="shop-text">ShopEleven</h1>
+
+                </div>
+
+                <h1 class="footer-tagline" style="font-size:12px;">Explore our most-loved <br>collection of stylish home </h1>
+
+                <div class="social-icons">
+                    <img src="/images/instagram-icon.png" alt="instagram-icon">
+                    <img src="/images/snapchat-icon.png" alt="snapchat-icon">
+                    <img src="/images/whatsapp-icon.png" alt="whatsapp-icon">
+                    <img src="/images/tiktok-icon.png" alt="tiktok-icon">
+                
+                </div>
+
+                <div class="mail">
+                     <h1>shopeleven@gmail.com</h1>
+
+                </div>
+
+               
+                
+
+            </div>
+
+            <div class="footer-column-b">
+
+                <span class = "Menu-footer" style=" font-weight:bold; padding-bottom:10px; padding-top:2px; margin-top:13px;">Menu</span>
+                <span>Home</span>
+                <span style="color:grey;">Shop</span>
+                <span style="color:grey;">Account</span>
+                <span style="color:grey;">Cart</span>
+                
+
+            </div>
+
+            <div class="footer-column-c">
+                <span class="Operational"  style=" font-weight:bold; padding-bottom:10px; margin-top:13px;">Operational</span>
+                <span style="color:grey;">Everyday: 9:00 - 22:00</span>
+                <span style="color:grey;">Sat-Sun: 8:00 - 21:00</span>
+                <span class="Reach" style=" font-weight:bold; padding-bottom:10px; padding-top:15px;">Reach out to us ? </span>
+                <span class="phone-number" style=" font-weight:bold; padding-bottom:10px; line-height:10px;">+(233) 592-128-637</span>
+
+            </div>
+
+            <div class="footer-column-d">
+                <h2 style="font-size:27px; padding-bottom:12px; "> Subscribe to our newsletter</h2>
+
+                <form class="subscribe">
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <p style="padding-top:10px;">Subscribe to our newsletter to be the first to know <br> about news and offers</p>
+
+            </div>
+
+        </div>
+    
+ @vite('resources/js/app.js')
 </body>
 </html>
