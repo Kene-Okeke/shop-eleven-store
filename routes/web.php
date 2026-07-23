@@ -11,9 +11,9 @@ Route::get('/products/{id}', [ProductController::class, 'show']);
 
 Route::get('/shop', [ProductController::class, 'index']);
 
-Route::get('/product', function () {
-    return view('single-product');
-});
+//Route::get('/product', function () {
+   // return view('single-product');
+//});
 
 Route::get('/admin/products/create',[ProductController::class, 'create']);
 
@@ -25,5 +25,8 @@ Route::get('/admin/categories/create-modal', function(){
     return view('admin.categories.create-modal');
 });
 
+Route::get('/cart', function(){
+    return view('cart');
+});
 
 

@@ -17,7 +17,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
                 <li><a href="#Account">Account</a></li>
-                <li><a href="#Cart">Cart</a></li>
+                <li><a href="/cart">Cart</a></li>
             </ul>
 
             <div class="logo">

@@ -980,3 +980,21 @@ a{
     grid-template-columns: repeat(3,1fr);
     gap: 80px;
 }
+
+.cart-badge{
+    color: white;
+    background-color: #602f03;
+    padding-top: 0.2px;
+    padding-bottom: 0.2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: none;
+}
+
+.cart-cont {
+    position: relative;
+}

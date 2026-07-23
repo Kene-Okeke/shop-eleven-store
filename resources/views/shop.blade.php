@@ -116,28 +116,37 @@
 
         <!-- product card--> 
          @foreach($products as $product)
-         <a href="/products/{{$product->id}}" class="product-link">
+       
          <div class="product-container">
-
+          <a href="/products/{{$product->id}}" class="product-link">
             <div class="image-container">
                  <img class="product-img" src="{{ $product->image_url }}" alt="product-image">
             </div>
-           
+        
             <h1 class="product-text">{{$product->name}}</h1>
-
+        </a>
             <div class="pricexcart">
 
                 <div class="Pricebutton-container">
                    <h1 style="font-size:15px; padding-top:13px;">GH₵ {{ $product->price }}</h1> 
                 </div>
 
+                <div class="cart-cont"
+                     data-id = "{{ $product->id }}"
+                     data-name = "{{ $product->name }}"
+                     data-price = "{{ $product->price }}"
+                     data-image = "{{ $product->image_url }}"
+                     data-category = "{{$product->category}}"
+                >
                 <div class="cart-cont">
+                    <span class="cart-badge">0</span>
+                </div>
                     <img src="/images/cart-icon.png" alt="cart-icon">
                 </div>
                
             </div>
          </div>
-        </a>
+       
          @endforeach
         
     </div>
@@ -206,6 +215,9 @@
 
         </div>
     
- @vite('resources/js/app.js')
+ @vite([
+    'resources/js/app.js',
+    'resources/js/cart.js' 
+    ])
 </body>
 </html>
