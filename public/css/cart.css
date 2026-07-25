@@ -427,3 +427,10 @@ nav{
 .footer-column-c{
     padding-top:10px;
 }
+
+.add,
+.subtract {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
