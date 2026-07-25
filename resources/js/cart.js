@@ -1,22 +1,58 @@
 // this is where our cart logic lives
+console.log("NEW CART JS LOADED");
 document.addEventListener('DOMContentLoaded',function(){
 
-    const shop_cart_buttons = document.querySelectorAll('.cart-cont'); //all cart buttons in our shop
+    renderCart();
     
-    const blade_cart_amount = document.querySelector('.cart-amount');
+    attachCartListeners();
+  
+});   
+    
 
-    const product_details = document.querySelector('#cart-products');
+    
+function renderCart(){
+
+   console.log("renderCart started");
+
+   const product_details = document.querySelector('#cart-products');
+
+   console.log("cart container:", product_details);
 
 
-    let cart = localStorage.getItem('cart')
+   if(!product_details){
+        console.log("cart container missing");
+        return;
+   }
 
-    if(cart){
-        cart = JSON.parse(cart);
+    console.log(product_details);
 
-        cart.forEach(product=>{
+   product_details.innerHTML = "";
+
+   let cart = localStorage.getItem('cart');
+
+   console.log("stored cart:", cart);
+
+   if(!cart){
+         product_details.innerHTML = 
+         `<h2>Your cart is empty</h2>
+         <p>Add products to see them here.</p>`;
+
+         return;
+   }
+
+   cart = JSON.parse(cart);
+
+   console.log("parsed cart:", cart);
+
+   cart.forEach(product=>{
+
+            console.log(product);
+
+            console.log("rendering product:", product);
+
             product_details.innerHTML += `
 
-                 <div class="Product-details-cont">
+                 <div class="Product-details-cont" data-id="${product.id}">
 
                     <div class="prodimagexname">
 
@@ -46,19 +82,17 @@ document.addEventListener('DOMContentLoaded',function(){
                      </div>
 
                  </div>
-            ` 
+            ` ;
         });
 
+         console.log("final HTML:", product_details.innerHTML);
 
-    }else{
-         product_details.innerHTML = `
-        <h2>Your cart is empty</h2>
-        <p>Add products to see them here.</p>
-    `;
-    }
+}
+
+export function attachCartListeners(){
+
+      const shop_cart_buttons = document.querySelectorAll('.cart-cont'); //all cart buttons in our shop
     
-
-    //listen for clicks on all buttons - and perform the function below
 
     shop_cart_buttons.forEach(button => {
 
@@ -89,6 +123,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
         if(cart){
             cart = JSON.parse(cart);
+
+            
             //we'll check is it the item that was clicked that is in the cart ,if yes + 
             // quantity only in the cart page as well as the shop page icon
             const existingProduct = cart.find(item => item.id == product_id);
@@ -100,7 +136,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
                 cart_badge.style.display = "flex";
                 
-                blade_cart_amount.innerHTML = existingProduct.quantity;
+               
 
             }else{
                 cart.push(product);
@@ -113,18 +149,23 @@ document.addEventListener('DOMContentLoaded',function(){
 
           localStorage.setItem('cart', JSON.stringify(cart))
 
+          renderCart();
+
         }else{
             cart = []
             cart.push(product);
-            localStorage.setItem('cart',JSON.stringify(cart))
+
+            localStorage.setItem('cart',JSON.stringify(cart));
+
+            cart_badge.innerHTML = product.quantity;
+
+            cart_badge.style.display = "flex";
             
+            renderCart();
         }
 
 
             
         })
     })
-});   
-    
-
-    
+}

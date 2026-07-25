@@ -78,7 +78,7 @@
 
     <div class="men-women-children">
 
-        <h3 class="men">Men</h3>
+       <a href="/cart"><h3 class="men">Cart</h3> </a> 
         <h3 class="women">Women</h3>
         <h3 class=" children">Children</h3>
         <h3 class="Brands">Brands</h3>

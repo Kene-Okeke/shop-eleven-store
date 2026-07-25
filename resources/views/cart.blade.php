@@ -58,66 +58,8 @@
                     
                 </div>
                 <div id="cart-products">
-                     <div class="Product-details-cont">
-                    
-                    <div class="prodimagexname">
-
-                        <img class="product-image" src="/images/pink-bag.jpg" alt="product-image">
-
-                        <div class="Nameandcategory">
-                            <h1>Bag</h1>
-                            <h3>Pink Summer Vibes</h3>
-                        </div>
-
-                    </div>
-                    <div class="quantitytotalaction">
-
-                        <div class="quantincreasecont">
-
-                          <span>+</span>  
-                          <span>4</span>
-                          <span>−</span>  
-                         
-                        </div>
-
-                        <h1 class="totalprice">GH₵100</h1>
-
-                        <img src="/images/delete-icon.png" alt="delete-icon">
-
-                    </div>
-
-                </div>
-
-                 <div class="Product-details-cont">
-                    
-                    <div class="prodimagexname">
-
-                        <img src="/images/powerbank.jpg" alt="product-image">
-
-                        <div class="Nameandcategory">
-                            <h1>Powerbank</h1>
-                            <h3>Green Power Bank</h3>
-                        </div>
-
-                    </div>
-                    <div class="quantitytotalaction">
-
-                        <div class="quantincreasecont">
-
-                          <span>+</span>  
-                          <span class="cart-amount">5</span>
-                          <span>−</span>  
-                         
-                        </div>
-
-                        <h1 class="totalprice">GH₵120</h1>
-
-                        <img src="/images/delete-icon.png" alt="delete-icon">
-
-                    </div>
-
-                </div>
-
+                     
+                     HELLO CART PRODUCTS
                 </div>
                
                 

@@ -77,7 +77,7 @@
 
     <div class="men-women-children">
 
-        <h3 class="men">Men</h3>
+        <a href="/cart"><h3 class="men">Cart</h3></a>
         <h3 class="women">Women</h3>
         <h3 class=" children">Children</h3>
         <h3 class="Brands">Brands</h3>
@@ -132,17 +132,20 @@
                 </div>
 
                 <div class="cart-cont"
-                     data-id = "{{ $product->id }}"
-                     data-name = "{{ $product->name }}"
-                     data-price = "{{ $product->price }}"
-                     data-image = "{{ $product->image_url }}"
-                     data-category = "{{$product->category}}"
+                    data-id="{{ $product->id }}"
+                    data-name="{{ $product->name }}"
+                    data-price="{{ $product->price }}"
+                    data-image="{{ $product->image_url }}"
+                    data-category="{{ $product->category->name }}"
                 >
-                <div class="cart-cont">
+
                     <span class="cart-badge">0</span>
-                </div>
+
                     <img src="/images/cart-icon.png" alt="cart-icon">
+
                 </div>
+                  
+                
                
             </div>
          </div>
@@ -215,9 +218,6 @@
 
         </div>
     
- @vite([
-    'resources/js/app.js',
-    'resources/js/cart.js' 
-    ])
+ @vite('resources/js/app.js')
 </body>
 </html>
