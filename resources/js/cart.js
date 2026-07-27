@@ -1,12 +1,34 @@
 // this is where our cart logic lives
+
+import { handleCheckout  } from "./checkout.js";
+
+
 console.log("NEW CART JS LOADED");
 document.addEventListener('DOMContentLoaded',function(){
 
     renderCart();
     
-    attachCartListeners();
+   // attachCartListeners();
+
+   
   
 });   
+
+function attachCheckoutListener(){
+
+    const checkoutButton = document.querySelector('.checkout');
+
+    if(!checkoutButton){
+        return;
+    }
+
+    checkoutButton.addEventListener('click', function(){
+
+      handleCheckout();
+
+    }, { once:true });
+
+}
 
 function renderOrderSummary(totalPrice,totalQuantity){
 
@@ -52,7 +74,7 @@ function renderOrderSummary(totalPrice,totalQuantity){
     
 
     
-function renderCart(){
+export function renderCart(){
 
    console.log("renderCart started");
 
@@ -146,88 +168,11 @@ function renderCart(){
          console.log("final HTML:", product_details.innerHTML);
 
          renderOrderSummary(totalPrice, totalQuantity);
+
+         attachCheckoutListener();
 }
 
-export function attachCartListeners(){
 
-      const shop_cart_buttons = document.querySelectorAll('.cart-cont'); //all cart buttons in our shop
-    
-
-    shop_cart_buttons.forEach(button => {
-
-        //add a click event listener for all cart buttons in the shop page ,multiplebuttons 
-        // with the same class name .cart-cont so we use document.querySelectorAll -key word all
-
-        button.addEventListener('click',function(){
-
-        const cart_badge = this.querySelector('.cart-badge');
-        
-        //next on click , pull all the data from the product clicked 
-        const product_id = this.dataset.id;
-        const product_name = this.dataset.name;
-        const product_price = this.dataset.price;
-        const product_image = this.dataset.image;
-        const product_category = this.dataset.category;
-
-        const product = {
-            id:product_id,
-            name:product_name,
-            price:product_price,
-            image:product_image,
-            quantity:1,
-            category:product_category,
-        }
-
-        let cart = localStorage.getItem('cart')
-
-        if(cart){
-            cart = JSON.parse(cart);
-
-            
-            //we'll check is it the item that was clicked that is in the cart ,if yes + 
-            // quantity only in the cart page as well as the shop page icon
-            const existingProduct = cart.find(item => item.id == product_id);
-
-            if(existingProduct){
-                existingProduct.quantity++;
-
-                cart_badge.innerHTML = existingProduct.quantity;
-
-                cart_badge.style.display = "flex";
-                
-               
-
-            }else{
-                cart.push(product);
-
-                cart_badge.innerHTML = product.quantity;
-
-                cart_badge.style.display = "flex";
-                
-            }
-
-          localStorage.setItem('cart', JSON.stringify(cart))
-
-          renderCart();
-
-        }else{
-            cart = []
-            cart.push(product);
-
-            localStorage.setItem('cart',JSON.stringify(cart));
-
-            cart_badge.innerHTML = product.quantity;
-
-            cart_badge.style.display = "flex";
-            
-            renderCart();
-        }
-
-
-            
-        })
-    })
-}
 
 function attachDeleteListeners(){
     const deleteIcons = document.querySelectorAll('.deleteIcon');
@@ -299,3 +244,4 @@ function attachQuantityListeners(){
         })
     })
 }
+

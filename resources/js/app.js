@@ -1,4 +1,8 @@
-import { attachCartListeners } from "./cart.js";
+import { attachCartListeners } from "./cartActions.js";
+import { renderCartBadges, load_cart_nav } from "./cartUtils.js";
+
+
+
 
 function renderProducts(products,productList){
 
@@ -29,7 +33,7 @@ function renderProducts(products,productList){
                     data-category="${product.category.name}">
 
                      <span class="cart-badge">0</span>
-                     
+
                     <img src="/images/cart-icon.png" alt="cart-icon">
                 </div>
                
@@ -38,7 +42,11 @@ function renderProducts(products,productList){
         
             `;
         });
+        
+        renderCartBadges();
         attachCartListeners();  
+      
+       
 
     };
 
@@ -47,6 +55,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const categoryFilters = document.querySelectorAll('.category-filter');
     const productList = document.getElementById('product-list');
     console.log("product list:", productList);
+    attachCartListeners();  
+    renderCartBadges();
+    load_cart_nav();
+
 
     
 
@@ -84,6 +96,4 @@ if(searchInput){
 }
 
 });
-
-
 

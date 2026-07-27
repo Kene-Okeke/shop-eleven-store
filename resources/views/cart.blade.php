@@ -59,7 +59,7 @@
                 </div>
                 <div id="cart-products">
                      
-                     HELLO CART PRODUCTS
+                     
                 </div>
                
                 
@@ -77,19 +77,19 @@
 
                     <div class ="totalChild">
                         <h1>Total</h1>
-                        <h2>GH₵2000</h2>
+                        <h2>GH₵0</h2>
                     </div>
 
                     <div class ="totalChild">
                         <h1>Total Quantity</h1>
-                        <h2>10</h2>
+                        <h2>0</h2>
                     </div>
  
                 </div>
 
                 <div class="main-total-container">
                     <h1>Total</h1>
-                    <h2>GH₵2000</h2>   
+                    <h2>GH₵0</h2>   
                 </div>
 
                 <button class="checkout">

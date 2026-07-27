@@ -28,6 +28,7 @@
                     <li><a href="">About</a></li>
                     <li><a href="">FAQ's</a></li>
                     <li class="single-cart-image">
+                        <span class="single-badge-nav">0</span>
                         <img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar">
                     </li>
                     
@@ -139,9 +140,15 @@
             
             <div class="Addtocart">
 
-                <div class="addtocart-button"> 
+                <button class="addtocart-button"
+                data-id="{{$product->id}}"
+                data-name="{{$product->name}}"
+                data-price="{{$product->price}}"
+                data-image="{{$product->image_url}}"
+                data-category="{{$product->category->name}}"
+                > 
                     <h3> Add to Cart</h3>
-                 </div>
+                </button>
                 
                  <span class="heart-emoji">♡</span>
                 
@@ -470,6 +477,6 @@
             </div>
 
         </div>
-    
+    @vite('resources/js/singleProduct.js')
 </body>
 </html>
