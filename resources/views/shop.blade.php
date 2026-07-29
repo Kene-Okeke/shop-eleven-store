@@ -80,7 +80,7 @@
     <div class="men-women-children">
 
         <a href="/cart"><h3 class="men">Cart</h3></a>
-        <h3 class="women">Women</h3>
+        <h3 class="women">Girls</h3>
         <h3 class=" children">Children</h3>
         <h3 class="Brands">Brands</h3>
 
@@ -89,9 +89,12 @@
 
 </section>
 
-<section class="back-arrow">
+<a href="/">
+    <section class="back-arrow">
     <span>← Home </span>
-</section>
+    </section>
+</a>
+
 
 <!-- this categoryAndShopcont is the 2 column structure for where products will be listed !-->
  

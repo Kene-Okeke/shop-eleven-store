@@ -12,7 +12,8 @@
 
 <section class="background">
     <!-- This is the navigation bar section -->
-        <nav>
+        <nav class="desktop-nav">
+
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
@@ -35,14 +36,44 @@
 
         </nav>
 
+        <nav class="mobile-nav">
+
+            <div class="mobile-menu-bar">
+                <img src="/images/white-menu.png" alt="menu-icon" class="menu-bar">
+            </div>
+             
+            <div class="logo">
+
+                <img src="/images/shopelevenlogo.png" alt="shop-logo" class="shop-logo">
+                <h1 class="shop-eleven-text">ShopEleven</h1>
+ 
+            </div>
+
+
+            <div class="mobile-shop-icon">
+                <img src="/images/new-cart.png" alt="shop icon" class="mobile-shop-img">
+            </div>
+
+
+        </nav>
+
     <!-- This is the hero section with bag background -->
-    <section class = "hero">
+     <section class="mobile-hero">
+         <section class = "hero">
 
          <div class="tagline-section">
             <div class="tagline">
                  <h1>Shop beautifully curated <br>everyday essentials.</h1>
             </div>
 
+            <div class="mobile-tagline">
+                <h1>
+                     Shop beautifully <br>
+                     curated everyday <br>
+                     essentials.
+                 </h1>
+            </div>
+            
             <div class="description-section">
 
                 <div class="description-text">
@@ -51,12 +82,14 @@
                         Shop Eleven brings you pieces designed to elevate your daily life.
                     </h1>
                 </div>
+                <a href="/shop">
+                    <div class="Shop-Now-Button">
 
-                <div class="Shop-Now-Button">
-                    <h1> Shop Now </h1>
+                        <h1> Shop Now </h1>
 
-                </div>
-
+                    </div>
+                </a>
+                
             </div>
            
         </div>
@@ -77,6 +110,8 @@
             </div>
         </div>
     </section>
+     </section>
+   
 
 
     <!-- This is the popular collection section + the footer -->
@@ -96,6 +131,9 @@
                     <h3 class= "Popular-tagline">
                         Explore our most-loved collection of stylish home <br> essentials and everyday must-haves.
                     </h3>
+
+                    
+
 
                 </div>
 
@@ -125,6 +163,14 @@
                         <span class="Hand Creams">Hand Creams</span>
                     </div>
 
+                    <section class="mobile-open-store">
+                        <div class="mobile-open-store-button">
+
+                            <h1>Open Store </h1>
+
+                        </div>
+                    </section>
+                    
 
 
                     <div class = "selected-items">
@@ -139,7 +185,7 @@
                                         <h3>GH₵{{$product->price}}</h3>
                                     </div>
 
-                                     <div>
+                                     <div class="cart-cont-mobile">
                                         <img src="/images/cart-icon.png" alt="cart-icon" class = "cart-icon">
                                     </div>
 
@@ -181,6 +227,8 @@
                         </div> !-->
 
                     </div>
+
+                    
 
 
                 </div>
@@ -253,6 +301,58 @@
 
         </div>
 
+        <div class="footer-section-mobile">
+    
+            <!-- Logo Section -->
+                 <div class="footer-logo-mobile">
+                    <img src="/images/shopelevenlogo.png" alt="shop-logo" class="footer-logo-img">
+                    <h1 class="footer-shop-name">ShopEleven</h1>
+                </div>
+
+             <!-- Quick Links -->
+            <div class="footer-links-mobile">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="#account">Account</a>
+                <a href="/cart">Cart</a>
+             </div>
+
+                <!-- Contact Info -->
+            <div class="footer-contact-mobile">
+                <h3>Contact Us</h3>
+                <p>📞 &nbsp;+(233) 592-128-637</p>
+                <p>📧 &nbsp;shopeleven@gmail.com</p>
+              
+            </div>
+
+                 <!-- Social Icons -->
+                <div class="footer-socials-mobile">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                         <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
+                        <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
+                         <a href="#whatsapp"><img src="/images/whatsapp-icon.png" alt="whatsapp"></a>
+                        <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
+                    </div>
+                </div>
+
+            <!-- Newsletter -->
+                <div class="footer-newsletter-mobile">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on new products & offers</p>
+        
+                    <form class="newsletter-form-mobile">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            <!-- Copyright -->
+              <div class="footer-copyright-mobile">
+                 <p>&copy; 2026 ShopEleven. All rights reserved.</p>
+              </div>
+
+        </div>
 
         
 

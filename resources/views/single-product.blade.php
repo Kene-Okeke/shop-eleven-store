@@ -29,7 +29,7 @@
                     <li><a href="">FAQ's</a></li>
                     <li class="single-cart-image">
                         <span class="single-badge-nav">0</span>
-                        <img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar">
+                        <a href="/cart"><img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar"></a>
                     </li>
                     
                 </ul>
