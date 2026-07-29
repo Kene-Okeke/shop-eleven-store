@@ -57,6 +57,28 @@
 
         </nav>
 
+        <!-- Dropdown -->
+
+        <div class="mobile-dropdown">
+
+            <a href="/"
+            class="{{ request()->is('/') ? 'active' : ''}}">
+            Home</a>
+            <hr>
+            <a href="/shop"
+            class="{{ request()->is('/shop') ? 'active' : ''}}">
+                Shop</a>
+            <hr>
+            <a href="#popular"
+              class="{{ request()->is('') ? 'active' : ''}}">
+            Popular</a>
+            <hr>
+            <a href="/cart"
+              class="{{ request()->is('/cart') ? 'active' : ''}}">
+            Cart</a>
+
+        </div>
+
     <!-- This is the hero section with bag background -->
      <section class="mobile-hero">
          <section class = "hero">
@@ -363,7 +385,7 @@
 
 
 </section>
-    
+     @vite('resources/js/home.js')
 </body>
 </html>
 

@@ -12,6 +12,10 @@ a {
     text-decoration: none;
     color:inherit;
 }
+
+.mobile-dropdown{
+    display: none;
+}
 .mobile-tagline{
     display: none;
 }
@@ -567,6 +571,7 @@ nav{
 
     .mobile-nav {
         display: flex !important;
+        position: relative;
         justify-content: space-between;
         align-items: center;
         padding: 15px 20px;
@@ -724,6 +729,7 @@ nav{
     .Popular-categories {
         flex-direction: column;
         gap: 20px;
+      
     }
 
     .fifty-off-column {
@@ -761,6 +767,7 @@ nav{
         flex-direction: column;
         gap: 15px;
         margin-top: 20px;
+        
     }
 
     .cat-column-1,
@@ -830,7 +837,7 @@ nav{
 @media(max-width: 480px) {
     
     .hero {
-        height: 350px;
+        height: 330px;
     }
 
     .mobile-hero{
@@ -847,6 +854,7 @@ nav{
         margin-right: 25px;
         margin-top: 10px;
         border-radius: 10px;
+        position: relative;
     }
     .tagline h1 {
        display: none;
@@ -894,6 +902,16 @@ nav{
     .cat-column-2,
     .cat-column-3 {
         height: 200px;
+        width: 108%;
+        max-width: 700px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        
+       
+        display: block;
+       
     }
 
     .footer-section{
@@ -1001,11 +1019,11 @@ nav{
    ============================================ */
 
     .footer-section-mobile {
-    background: linear-gradient(135deg, #b78148 0%, #535353 100%);
+    background: linear-gradient(135deg, #824809 0%, #000000 100%);
     color: white;
     padding: 30px 15px;
     margin-top: 40px;
-    border-top: 2px solid #FF4D8D;
+    border-top: 2px solid #000000;
     display: block;
     border-radius: 20px;
     
@@ -1205,6 +1223,50 @@ nav{
     * {
     transition: color 0.3s ease, background-color 0.3s ease;
     }
+
+    .mobile-dropdown{
+        position: absolute;
+        top:9%;
+        left: 33px;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+
+        transition: all 0.3s ease;
+    }
+
+    .mobile-dropdown.active{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background-color: #965e73;
+        color: white;
+        width: 150px;
+        border: #ff4d8e6e;
+        border-style: solid;
+        border-width: 1.5px;
+        padding: 10px;
+        border-radius: 20px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .hr{
+        color: #FF4D8D;
+        height: 1px;
+    }
+
+    .mobile-dropdown a.active {
+        background-color: white;
+        padding: 5px;
+        color: #000000;
+        border-radius: 5px;
+    }
+
+     
+
     
 
 }
