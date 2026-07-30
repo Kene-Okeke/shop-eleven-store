@@ -11,7 +11,7 @@
 <body>
 
 <!-- this is the nav bar section-->
-        <nav>
+        <nav class="desktop-nav">
             <div class="menu-image-single">
                 <img src="/images/menu-bar.png" alt="menu-bar" >
             </div>
@@ -37,57 +37,58 @@
             </div>
         </nav>
 
-<!--This will be right under the nav bar with the search icons-->
-<section class="search-under-nav">
+        <nav class="mobile-nav">
 
-     <div class="container-search">
+            <div class="mobile-menu-bar">
+                <img src="/images/white-menu.png" alt="menu-icon" class="menu-bar">
+            </div>
 
-        <form action="" class="categories-form">
+            <div class="logo">
+                <img src="/images/shopelevenlogo.png" alt="shop-logo" class="shop-logo">
+                 <h1 class="shop-eleven-text">ShopEleven</h1>
+            </div>
 
-            <input type="Categories" class='categories-search-box' placeholder="Categories">
+            <ul>
+                <li class="single-cart-image">
 
-        <div class="first-arrow-background">
-             <h3 class="form-down-arrow">⌄</h3>
+                    <span class="single-badge-nav">0</span>
+
+                        <div class="mobile-cart-cont">
+
+                            <a href="/cart">
+                                <img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar">
+                            </a>
+
+                        </div>
+                    
+                </li>
+            </ul>
+
+        </nav>
+
+         <!-- Dropdown -->
+
+        <div class="mobile-dropdown">
+
+            <a href="/"
+            class="{{ request()->is('/') ? 'active' : ''}}">
+            Home</a>
+            <hr>
+            <a href="/shop"
+            class="{{ request()->is('/shop') ? 'active' : ''}}">
+                Shop</a>
+            <hr>
+            <a href="#popular"
+              class="{{ request()->is('') ? 'active' : ''}}">
+            Popular</a>
+            <hr>
+            <a href="/cart"
+              class="{{ request()->is('/cart') ? 'active' : ''}}">
+            Cart</a>
+
         </div>
-           
 
-        </form>
-
-        <form action="" class="new-product-form">
-
-            <input type="New Product" placeholder="New Product" class='product-search-box'>
-            
-            <div class="second-arrow-background">
-                <h3 class="form-down-arrow">⌄</h3>
-            </div>
-            
-
-        </form>
-
-        <form action="" class="search-form">
-
-            <input type="search" placeholder="Search" class='third-search-box'>
-
-            <div class="search-icon-container">
-                 <img src="/images/search-icon.png" alt="search-icon">
-            </div>
-           
-
-        </form>
-
-    </div>
-
-    <div class="men-women-children">
-
-       <a href="/cart"><h3 class="men">Cart</h3> </a> 
-        <h3 class="women">Women</h3>
-        <h3 class=" children">Children</h3>
-        <h3 class="Brands">Brands</h3>
-
-    </div>
-
-
-</section>
+<!--This will be right under the nav bar with the search icons-->
 
 <section class="back-arrow">
     <span>← Home . Product details</span>
@@ -130,6 +131,7 @@
             <h3 class="color-text">Select Color</h3>
 
             <div class="color-options">
+
                 <span>green</span>
                 <span>blue</span>
                 <span>pink</span>
@@ -415,7 +417,7 @@
 
 <!--footer section-->
 
- <div class="footer-section">
+        <div class="footer-section">
 
             <div class="footer-column-a">
                 <div class="logo-footer" style="margin-top:13px;">
@@ -477,6 +479,59 @@
             </div>
 
         </div>
+
+        <div class="footer-section-mobile">
+    
+            <!-- Logo Section -->
+                 <div class="footer-logo-mobile">
+                    <img src="/images/shopelevenlogo.png" alt="shop-logo" class="footer-logo-img">
+                    <h1 class="footer-shop-name">ShopEleven</h1>
+                </div>
+
+             <!-- Quick Links -->
+            <div class="footer-links-mobile">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="#account">Account</a>
+                <a href="/cart">Cart</a>
+             </div>
+
+                <!-- Contact Info -->
+            <div class="footer-contact-mobile">
+                <h3>Contact Us</h3>
+                <p>📞 &nbsp;+(233) 592-128-637</p>
+              
+            </div>
+
+                 <!-- Social Icons -->
+                <div class="footer-socials-mobile">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                         <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
+                        <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
+                         <a href="#whatsapp"><img src="/images/whatsapp-icon.png" alt="whatsapp"></a>
+                        <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
+                    </div>
+                </div>
+
+            <!-- Newsletter -->
+                <div class="footer-newsletter-mobile">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on new products & offers</p>
+        
+                    <form class="newsletter-form-mobile">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            <!-- Copyright -->
+              <div class="footer-copyright-mobile">
+                 <p>&copy; 2026 ShopEleven. All rights reserved.</p>
+              </div>
+
+        </div>
+
     @vite('resources/js/singleProduct.js')
 </body>
 </html>
