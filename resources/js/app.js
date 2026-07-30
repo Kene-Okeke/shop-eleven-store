@@ -1,15 +1,11 @@
 import { attachCartListeners } from "./cartActions.js";
 import { renderCartBadges, load_cart_nav } from "./cartUtils.js";
 
+function renderProducts(products, productList) {
+    productList.innerHTML = "";
 
-
-
-function renderProducts(products,productList){
-
-     productList.innerHTML = "";
-
-        products.forEach(product => {
-            productList.innerHTML += `
+    products.forEach((product) => {
+        productList.innerHTML += `
             
          <div class="product-container">
             <a href="/products/${product.id}" class="product-link">
@@ -41,59 +37,59 @@ function renderProducts(products,productList){
          </div>
         
             `;
-        });
-        
-        renderCartBadges();
-        attachCartListeners();  
-      
-       
+    });
 
-    };
+    renderCartBadges();
+    attachCartListeners();
+}
 
-
-document.addEventListener('DOMContentLoaded', ()=>{
-    const categoryFilters = document.querySelectorAll('.category-filter');
-    const productList = document.getElementById('product-list');
+document.addEventListener("DOMContentLoaded", () => {
+    const categoryFilters = document.querySelectorAll(".category-filter");
+    const productList = document.getElementById("product-list");
     console.log("product list:", productList);
-    attachCartListeners();  
+    attachCartListeners();
     renderCartBadges();
     load_cart_nav();
 
+    categoryFilters.forEach((filter) => {
+        filter.addEventListener("click", async function () {
+            console.log("filter clicked", this.value);
 
-    
+            const response = await fetch(
+                `/api/categories/${this.value}/products`,
+            ); // for us to pass a variable
+            // inside the fetch we use a back tick instead of normal tick
 
-categoryFilters.forEach(filter =>{
+            const products = await response.json();
 
-    filter.addEventListener('click', async function () {
-
-        console.log("filter clicked", this.value);
-        
-        const response = await fetch(`/api/categories/${this.value}/products`); // for us to pass a variable 
-        // inside the fetch we use a back tick instead of normal tick
-
-        const products = await response.json();
-
-
-        renderProducts(products.data,productList);
-    })
-});
-
-const searchInput = document.getElementById('search-input');
-
-console.log("search input:", searchInput);
-
-if(searchInput){
-    searchInput.addEventListener('input',async function(){
-    const query = this.value;
-
-    const response = await fetch(`/api/products/search?q=${query}`);
-
-    const products = await response.json();
-    
-       renderProducts(products.data,productList);
-        
+            renderProducts(products.data, productList);
+        });
     });
-}
 
+    const searchInputs = document.querySelectorAll(
+        "#mobile-search-input,#search-input",
+    );
+
+    console.log("search input:", searchInputs);
+
+    searchInputs.forEach((searchInput) => {
+        searchInput.addEventListener("input", async function () {
+            const query = this.value;
+
+            const response = await fetch(`/api/products/search?q=${query}`);
+
+            const products = await response.json();
+
+            renderProducts(products.data, productList);
+        });
+    });
+
+    //dropdown menu js for the shop page
+    const menuButton = document.querySelector(".mobile-menu-bar");
+
+    const dropDown = document.querySelector(".mobile-dropdown");
+
+    menuButton.addEventListener("click", function () {
+        dropDown.classList.toggle("active");
+    });
 });
-

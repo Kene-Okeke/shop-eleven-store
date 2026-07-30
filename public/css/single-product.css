@@ -12,6 +12,10 @@ body {
     display: none;
 }
 
+.mobile-search {
+    display: none;
+}
+
 .mobile-dropdown {
     display: none;
 }
@@ -1006,7 +1010,7 @@ a {
     .mobile-nav {
         display: flex !important;
         justify-content: space-between;
-        background-color: rgba(0, 0, 0, 0.202);
+        background-color: rgba(0, 0, 0, 0.315);
         width: 90%;
         max-width: 400px;
         margin-left: 20px;
@@ -1030,13 +1034,13 @@ a {
 
     .mobile-menu-bar {
         flex: 1;
-        margin-left: -26px;
-        margin-top: -11px;
+        margin-left: -20px;
+        margin-top: -9.5px;
     }
 
     .mobile-menu-bar img {
         width: 32px;
-        height: 37px;
+        height: 36px;
     }
 
     .might-like-images {
@@ -1059,7 +1063,7 @@ a {
         justify-content: center;
         align-items: center;
         padding: 0;
-        margin-right: 70px;
+        margin-right: 87px;
         margin-top: -10px;
     }
 
@@ -1232,11 +1236,13 @@ a {
 
     .shop-list-column {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
+        margin-left: 25px;
+        margin-top: -16px;
     }
 
     .product-container {
-        width: 100%;
+        width: 90px;
     }
 
     .product-container img {
@@ -1504,5 +1510,168 @@ a {
         padding: 5px;
         color: #000000;
         border-radius: 5px;
+    }
+
+    /*shop page mobile css*/
+
+    /* Main shop container */
+    .categoryAndShopcont {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: -15px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Horizontal scrolling categories */
+    .category-column {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-left: -40px;
+
+        width: 400%;
+        max-width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding: 10px 15px;
+
+        box-sizing: border-box;
+    }
+
+    .category-col-mobile {
+        margin-left: 80px;
+        margin-right: -10px;
+    }
+
+    .category-column::-webkit-scrollbar {
+        display: none;
+    }
+
+    .category-column h1 {
+        display: none;
+    }
+
+    .category-column label {
+        flex: 0 0 auto;
+        white-space: nowrap;
+
+        background: #965e73;
+        color: white;
+
+        padding: 8px 18px;
+        border-radius: 20px;
+
+        font-size: 14px;
+    }
+
+    .category-column label {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    /* Remove radio button appearance */
+    .category-column input {
+        display: none;
+    }
+
+    /* Product section */
+    .shop-list-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 10px 15px;
+    }
+
+    /* Product card */
+    .product-container {
+        width: 100%;
+    }
+
+    /* Product image */
+    .image-container {
+        width: 100%;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Product name */
+    .product-container h1 {
+        font-size: 11px;
+        margin-top: 8px;
+        line-height: 18px;
+    }
+
+    /* Price + cart row */
+    .pricexcart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+        gap: 10%;
+    }
+
+    .Pricebutton-container h1 {
+        font-size: 10px !important;
+        padding-top: 0px !important;
+        padding-bottom: 5px;
+
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .Pricebutton-container {
+        width: 90px;
+        padding: 0%;
+    }
+
+    /* Cart icon */
+    .cart-cont img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cart-cont {
+        position: relative;
+    }
+
+    .cart-badge {
+        font-size: 10px;
+    }
+
+    .mobile-search {
+        display: flex;
+        margin-left: 25px;
+        margin-top: -13px;
+        padding-bottom: 17px;
+    }
+
+    .search-icon-container {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 390px) {
+    .mobile-search {
+        margin-left: 33px;
+        width: 320px;
+    }
+
+    .pricexcart {
+        width: 150px;
+        margin-left: -10px;
     }
 }

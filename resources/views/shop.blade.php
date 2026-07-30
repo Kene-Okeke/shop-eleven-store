@@ -80,7 +80,7 @@
     <div class="men-women-children">
 
         <a href="/cart"><h3 class="men">Cart</h3></a>
-        <h3 class="women">Girls</h3>
+        <h3 class="women">Women</h3>
         <h3 class=" children">Children</h3>
         <h3 class="Brands">Brands</h3>
 
@@ -89,34 +89,108 @@
 
 </section>
 
+        <nav class="mobile-nav">
+
+            <div class="mobile-menu-bar">
+                <img src="/images/white-menu.png" alt="menu-icon" class="menu-bar">
+            </div>
+
+            <div class="logo">
+                <img src="/images/shopelevenlogo.png" alt="shop-logo" class="shop-logo">
+                 <h1 class="shop-eleven-text">ShopEleven</h1>
+            </div>
+
+            <ul>
+                <li class="single-cart-image">
+
+                    <span class="single-badge-nav">0</span>
+
+                        <div class="mobile-cart-cont">
+
+                            <a href="/cart">
+                                <img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar">
+                            </a>
+
+                        </div>
+                    
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Dropdown -->
+
+        <div class="mobile-dropdown">
+
+            <a href="/"
+            class="{{ request()->is('/') ? 'active' : ''}}">
+            Home</a>
+            <hr>
+            <a href="/shop"
+            class="{{ request()->is('shop') ? 'active' : ''}}">
+                Shop</a>
+            <hr>
+            <a href="#popular"
+              class="{{ request()->is('') ? 'active' : ''}}">
+            Popular</a>
+            <hr>
+            <a href="/cart"
+              class="{{ request()->is('cart') ? 'active' : ''}}">
+            Cart</a>
+
+        </div>
+
+       
+    
+
+
 <a href="/">
     <section class="back-arrow">
     <span>← Home </span>
     </section>
 </a>
 
+ <!--mobile-search-form!--> 
+<div class="mobile-search">
+
+    <form action="" class="search-form">
+
+        <input type="search" placeholder="Search" class='third-search-box' id ="mobile-search-input">
+
+        <div class="search-icon-container">
+             <img src="images/search-icon.png" alt="search-icon">
+        </div>
+           
+    </form>
+
+</div>
+
 
 <!-- this categoryAndShopcont is the 2 column structure for where products will be listed !-->
  
 <div class="categoryAndShopcont">
 
-    <div class="category-column">
+    <div class="category-col-mobile">
 
-        <h1>Category</h1>
+        <div class="category-column">
 
-       <label>
-         <a href="/shop">All Products</a>
-        </label>
-        @foreach($categories as $category)
-        <label>
-            <input type="radio" name="product-category" class="category-filter" value="{{$category->id}}">
-            {{ $category->name }}
-        </label>
-        @endforeach
+            <h1>Category</h1>
+
+            <label>
+                <a href="/shop">All Products</a>
+            </label>
+            @foreach($categories as $category)
+            <label class="mobile-cat">
+                <input type="radio" name="product-category" class="category-filter" value="{{$category->id}}">
+                {{ $category->name }}
+            </label>
+            @endforeach
        
-         
+        </div>
 
     </div>
+
+    
     <div class="shop-list-column" id="product-list">
 
         <!-- product card--> 
@@ -220,6 +294,57 @@
                 <p style="padding-top:10px;">Subscribe to our newsletter to be the first to know <br> about news and offers</p>
 
             </div>
+
+        </div>
+         <div class="footer-section-mobile">
+    
+            <!-- Logo Section -->
+                 <div class="footer-logo-mobile">
+                    <img src="/images/shopelevenlogo.png" alt="shop-logo" class="footer-logo-img">
+                    <h1 class="footer-shop-name">ShopEleven</h1>
+                </div>
+
+             <!-- Quick Links -->
+            <div class="footer-links-mobile">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="#account">Account</a>
+                <a href="/cart">Cart</a>
+             </div>
+
+                <!-- Contact Info -->
+            <div class="footer-contact-mobile">
+                <h3>Contact Us</h3>
+                <p>📞 &nbsp;+(233) 592-128-637</p>
+              
+            </div>
+
+                 <!-- Social Icons -->
+                <div class="footer-socials-mobile">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                         <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
+                        <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
+                         <a href="#whatsapp"><img src="/images/whatsapp-icon.png" alt="whatsapp"></a>
+                        <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
+                    </div>
+                </div>
+
+            <!-- Newsletter -->
+                <div class="footer-newsletter-mobile">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on new products & offers</p>
+        
+                    <form class="newsletter-form-mobile">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            <!-- Copyright -->
+              <div class="footer-copyright-mobile">
+                 <p>&copy; 2026 ShopEleven. All rights reserved.</p>
+              </div>
 
         </div>
     
