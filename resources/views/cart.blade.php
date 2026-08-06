@@ -211,6 +211,59 @@
 
         </div>
     </section>
+
+     <div class="footer-section-mobile">
+    
+            <!-- Logo Section -->
+                 <div class="footer-logo-mobile">
+                    <img src="/images/shopelevenlogo.png" alt="shop-logo" class="footer-logo-img">
+                    <h1 class="footer-shop-name">ShopEleven</h1>
+                </div>
+
+             <!-- Quick Links -->
+            <div class="footer-links-mobile">
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="#account">Account</a>
+                <a href="/cart">Cart</a>
+             </div>
+
+                <!-- Contact Info -->
+            <div class="footer-contact-mobile">
+                <h3>Contact Us</h3>
+                <p>📞 &nbsp;+(233) 592-128-637</p>
+                <p>📧 &nbsp;shopeleven@gmail.com</p>
+              
+            </div>
+
+                 <!-- Social Icons -->
+                <div class="footer-socials-mobile">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                         <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
+                        <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
+                         <a href="#whatsapp"><img src="/images/whatsapp-icon.png" alt="whatsapp"></a>
+                        <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
+                    </div>
+                </div>
+
+            <!-- Newsletter -->
+                <div class="footer-newsletter-mobile">
+                    <h3>Newsletter</h3>
+                    <p>Get updates on new products & offers</p>
+        
+                    <form class="newsletter-form-mobile">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            <!-- Copyright -->
+              <div class="footer-copyright-mobile">
+                 <p>&copy; 2026 ShopEleven. All rights reserved.</p>
+              </div>
+
+        </div>
  @vite('resources/js/cart.js')
 </body>
 </html>

@@ -1362,22 +1362,33 @@ nav {
 
     .description-text {
         display: none;
-        width: 90%;
+        width: 350px;
         margin-top: 25px;
     }
 
     .description-text h1 {
-        font-size: 16px;
+        font-size: 10px;
         line-height: 1.8;
     }
 
     .Shop-Now-Button {
         margin: 35px 0 0;
+
         width: 300px;
         padding-top: 15px;
         padding-bottom: 15px;
         justify-content: center;
         margin-top: -7px;
+    }
+
+    @media (min-width: 60px) and (max-width: 734px) {
+        .Shop-Now-Button {
+            margin-top: 40px;
+        }
+
+        .mobile-tagline {
+            margin-top: 30px;
+        }
     }
 
     .Shop-Now-Button h1 {
@@ -1484,7 +1495,7 @@ nav {
     .cat-column-2,
     .cat-column-3 {
         width: 100%;
-        height: 330px;
+        height: 420px;
         border-radius: 18px;
     }
 
@@ -1717,5 +1728,18 @@ nav {
         font-size: 9px;
         color: #888;
         line-height: 1.5;
+    }
+}
+
+@media (max-width: 900px) {
+    .description-text {
+        display: flex;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 734px) {
+    .description-text {
+        display: none;
     }
 }
