@@ -128,17 +128,7 @@
 
         <div class="select-color-section">
 
-            <h3 class="color-text">Select Color</h3>
-
-            <div class="color-options">
-
-                <span>green</span>
-                <span>blue</span>
-                <span>pink</span>
-                <span>black</span>
-                <span>brown</span>
-                
-            </div>
+           
             
             <div class="Addtocart">
 

@@ -10,7 +10,7 @@
     <section class="background">
 
  
-     <nav>
+        <nav>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
@@ -33,9 +33,55 @@
 
         </nav>
 
+    <!--mobile nav bar put the mobile nav bar here -->
+
+        <nav class="mobile-nav">
+
+            <div class="mobile-menu-bar">
+                <img src="/images/white-menu.png" alt="menu-icon" class="menu-bar" >
+            </div>
+             
+            <div class="logo">
+
+                <img src="/images/shopelevenlogo.png" alt="shop-logo" class="shop-logo">
+                <h1 class="shop-eleven-text">ShopEleven</h1>
+ 
+            </div>
+
+
+            <div class="mobile-shop-icon">
+                <img src="/images/new-cart.png" alt="shop icon" class="mobile-shop-img">
+            </div>
+
+
+        </nav>
+
+    <!-- dropdown--> 
+    
+     <div class="mobile-dropdown">
+
+            <a href="/"
+            class="{{ request()->is('/') ? 'active' : ''}}">
+            Home</a>
+            <hr>
+            <a href="/shop"
+            class="{{ request()->is('shop') ? 'active' : ''}}">
+                Shop</a>
+            <hr>
+            <a href="#popular"
+              class="{{ request()->is('') ? 'active' : ''}}">
+            Popular</a>
+            <hr>
+            <a href="/cart"
+              class="{{ request()->is('cart') ? 'active' : ''}}">
+            Cart</a>
+
+    </div>
+
+
         <div class="divider"></div>
 
-        <h1 style="padding-left:47px; font-weight:300; padding-bottom:13px; padding-top:10px; color:white;">Shopping Cart</h1>
+        <h1 class="shop-text-mobile"style="padding-left:47px; font-weight:300; padding-bottom:13px; padding-top:10px; color:white;">Shopping Cart</h1>
 
     <section class="twocolumnscartandorder">
             

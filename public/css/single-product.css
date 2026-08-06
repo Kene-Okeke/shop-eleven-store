@@ -867,6 +867,7 @@ body {
     display: flex;
     gap: 30px;
     margin-left: 50px;
+    padding-top: 30px;
 }
 
 .category-column {
@@ -1655,8 +1656,8 @@ a {
     .mobile-search {
         display: flex;
         margin-left: 25px;
-        margin-top: -13px;
-        padding-bottom: 17px;
+        margin-top: 30px;
+        padding-bottom: -30px;
     }
 
     .search-icon-container {

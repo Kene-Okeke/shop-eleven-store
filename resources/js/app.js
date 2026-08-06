@@ -1,5 +1,8 @@
 import { attachCartListeners } from "./cartActions.js";
 import { renderCartBadges, load_cart_nav } from "./cartUtils.js";
+import { attachMenuListener } from "./mobileMenu.js";
+
+console.log("APP.JS EXECUTED", performance.now());
 
 function renderProducts(products, productList) {
     productList.innerHTML = "";
@@ -44,6 +47,10 @@ function renderProducts(products, productList) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    attachMenuListener();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     const categoryFilters = document.querySelectorAll(".category-filter");
     const productList = document.getElementById("product-list");
     console.log("product list:", productList);
@@ -82,14 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
             renderProducts(products.data, productList);
         });
-    });
-
-    //dropdown menu js for the shop page
-    const menuButton = document.querySelector(".mobile-menu-bar");
-
-    const dropDown = document.querySelector(".mobile-dropdown");
-
-    menuButton.addEventListener("click", function () {
-        dropDown.classList.toggle("active");
     });
 });

@@ -1,3 +1,5 @@
+import { attachMenuListener } from "./mobileMenu.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     load_cart_single_nav();
 
@@ -20,13 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         singleCartButton.disabled = true;
     }
 
-    const menuButton = document.querySelector(".mobile-menu-bar");
-
-    const dropDown = document.querySelector(".mobile-dropdown");
-
-    menuButton.addEventListener("click", function () {
-        dropDown.classList.toggle("active");
-    });
+    attachMenuListener();
 
     const heart = document.querySelector(".heart-emoji");
 

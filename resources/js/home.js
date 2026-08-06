@@ -1,7 +1,5 @@
-const menuButton = document.querySelector('.mobile-menu-bar')
+import { attachMenuListener } from "./mobileMenu.js";
 
-const dropDown = document.querySelector('.mobile-dropdown')
-
-menuButton.addEventListener('click',function(){
-    dropDown.classList.toggle('active')
-})
+document.addEventListener("DOMContentLoaded", () => {
+    attachMenuListener();
+});
