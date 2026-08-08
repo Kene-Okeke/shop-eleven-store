@@ -27,12 +27,13 @@
                 <h1 class="shop-eleven-text">ShopEleven</h1>
 
             </div>
-
+            
+        <a href="#girl-image">
             <div class="menu-box">
                 <span class="menu-text">Popular</span>
                 <img src="/images/celebrate.png" alt="menu-icon" class="menu-bar"> 
             </div>
-
+        </a>
 
         </nav>
 
@@ -50,10 +51,11 @@
             </div>
 
 
-            <div class="mobile-shop-icon">
-                <img src="/images/new-cart.png" alt="shop icon" class="mobile-shop-img">
-            </div>
-
+            <a href="/shop">
+                <div class="mobile-shop-icon">
+                    <img src="/images/new-cart.png" alt="shop icon" class="mobile-shop-img">
+                 </div>
+            </a>
 
         </nav>
 
@@ -116,6 +118,7 @@
            
         </div>
 
+       <a href="/shop">
         <div class="bag-widget">
             <img src="/images/pink-bag.jpg" alt="bag-image" class="black-bag">
 
@@ -131,6 +134,7 @@
                 </div>
             </div>
         </div>
+        </a>
     </section>
      </section>
    
@@ -158,33 +162,39 @@
 
 
                 </div>
-
+            <a href="/shop">
                 <div class="open-store-button">
 
                     <h1>Open Store </h1>
 
                 </div>
-
+            </a>
             </div>
 
             <div class="Popular-categories">
-
-                <div class= "fifty-off-column" style="background-image: url('{{ asset('images/girl-wbag.jpeg') }}');">
+                <a href="/shop">
+                <div id = "girl-image"class= "fifty-off-column" style="background-image: url('{{ asset('images/girl-wbag.jpeg') }}');">
+                    
+                  
+                        <div class="discover-button">
+                            <h3>Discover More </h3>
+                        </div>
                      
-                    <div class="discover-button">
-                        <h3>Discover More </h3>
-                    </div>
+    
                 </div>
-
+                </a>
                 <div class="categories-section-box">
 
+                
                     <div class="four-categories">
-                        <span class="Tote-Bags">Tote bags</span>
-                        <span class="Study Tables">Study Tables</span>
-                        <span class="Hot Plates">Hot Plates</span>
-                        <span class="Hand Creams">Hand Creams</span>
+                        @foreach($categories as $category)
+                            <span data-id="{{$category->id}}" class="Category">
+                                {{$category->name}}
+                            </span>
+                            
+                        @endforeach 
                     </div>
-
+                <a href="/shop">
                     <section class="mobile-open-store">
                         <div class="mobile-open-store-button">
 
@@ -192,7 +202,7 @@
 
                         </div>
                     </section>
-                    
+                </a>  
 
 
                     <div class = "selected-items">
@@ -335,7 +345,7 @@
             <div class="footer-links-mobile">
                 <a href="/">Home</a>
                 <a href="/shop">Shop</a>
-                <a href="#account">Account</a>
+                <a href="#girl-image">Popular</a>
                 <a href="/cart">Cart</a>
              </div>
 

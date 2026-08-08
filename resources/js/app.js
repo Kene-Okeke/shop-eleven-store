@@ -58,19 +58,31 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCartBadges();
     load_cart_nav();
 
+    async function loadProducts(value) {
+        const response = await fetch(`/api/categories/${value}/products`);
+
+        const products = await response.json();
+
+        renderProducts(products.data, productList);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+
+    const categoryid = params.get("category");
+
+    console.log("category_id :", categoryid);
+
+    if (categoryid) {
+        productList.innerHTML = `
+        <div class="product-loading">
+            <img src="/images/shopelevenlogo.png" alt="Loading...">
+        </div>
+    `;
+        loadProducts(categoryid);
+    }
+
     categoryFilters.forEach((filter) => {
-        filter.addEventListener("click", async function () {
-            console.log("filter clicked", this.value);
-
-            const response = await fetch(
-                `/api/categories/${this.value}/products`,
-            ); // for us to pass a variable
-            // inside the fetch we use a back tick instead of normal tick
-
-            const products = await response.json();
-
-            renderProducts(products.data, productList);
-        });
+        filter.addEventListener("click", () => loadProducts(filter.value));
     });
 
     const searchInputs = document.querySelectorAll(

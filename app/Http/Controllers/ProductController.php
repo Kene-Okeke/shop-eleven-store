@@ -28,6 +28,15 @@ class ProductController extends Controller
         return view('shop', compact('products','categories'));
     }
 
+    public function home(){
+
+        //talk to the category model to pull all categories
+        $categories = Category::all();
+        return view('/', compact('categories'));
+
+
+    }
+
     //Get single product by ID
     public function show($id){
         $product = Product::with('category')->findOrFail($id);

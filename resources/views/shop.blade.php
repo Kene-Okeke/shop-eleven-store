@@ -80,7 +80,7 @@
     <div class="men-women-children">
 
         <a href="/cart"><h3 class="men">Bags</h3></a>
-        <h3 class="women">Home</h3>
+        <a href="/"><h3 class="women">Home</h3></a>
         <h3 class=" children">Electronics</h3>
         <h3 class="Brands">Beauty</h3>
 

@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+.product-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.product-loading img {
+    width: 55px;
+    height: 55px;
+    animation: shopElevenSpin 1.2s linear infinite;
+}
+
+@keyframes shopElevenSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 body {
     font-family: "Bodoni Moda", serif;
 }
