@@ -1273,3 +1273,445 @@ nav {
         line-height: 1.5;
     }
 }
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   900px - 1200px
+   Same desktop layout, scaled down
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: #410119;
+    }
+
+    /* =====================================================
+       MAIN BACKGROUND
+    ===================================================== */
+
+    .background {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 25px 40px;
+        overflow: hidden;
+    }
+
+    /* =====================================================
+       DESKTOP NAV
+    ===================================================== */
+
+    nav {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 25px 18px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: clamp(20px, 3vw, 35px);
+        padding: 8px 15px;
+        border-radius: 9px;
+    }
+
+    .nav-links a {
+        font-size: clamp(11px, 1.1vw, 13px);
+    }
+
+    .logo {
+        padding-right: 0;
+        padding-top: 5px;
+    }
+
+    .logo h1 {
+        font-size: clamp(17px, 1.7vw, 20px);
+    }
+
+    .shop-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .menu-box {
+        padding: 8px 20px 5px;
+        gap: 8px;
+        border-radius: 9px;
+    }
+
+    .menu-text {
+        font-size: 13px;
+    }
+
+    .menu-bar {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* =====================================================
+       DIVIDER
+    ===================================================== */
+
+    .divider {
+        width: calc(100% - 50px);
+        margin-left: 25px;
+    }
+
+    /* =====================================================
+       SHOPPING CART TITLE
+    ===================================================== */
+
+    .shop-text-mobile {
+        padding-left: 0 !important;
+        margin-left: 25px;
+        font-size: clamp(25px, 2.6vw, 30px) !important;
+    }
+
+    /* =====================================================
+       CART + ORDER SUMMARY
+    ===================================================== */
+
+    .twocolumnscartandorder {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: flex-start;
+
+        gap: clamp(15px, 2vw, 30px);
+
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 70px;
+    }
+
+    /* =====================================================
+       PRODUCT CARD
+    ===================================================== */
+
+    .Product-card-cont {
+        /*
+           Roughly:
+           900px screen  -> ~62%
+           1200px screen -> ~68%
+        */
+        width: clamp(550px, 65vw, 780px);
+
+        flex: 1 1 auto;
+        min-width: 0;
+
+        padding: clamp(20px, 2.5vw, 30px);
+
+        border-radius: 17px;
+
+        border-style: solid;
+        border-color: rgba(84, 84, 84, 0.4);
+        border-width: 1px;
+
+        background-color: white;
+        color: black;
+    }
+
+    /* =====================================================
+       PRODUCT HEADER
+    ===================================================== */
+
+    .product-code {
+        padding-bottom: 12px;
+    }
+
+    .text-productcode h1,
+    .quantity-left h1 {
+        font-size: clamp(14px, 1.5vw, 17px);
+        font-weight: 200;
+    }
+
+    .quantity-left {
+        gap: clamp(50px, 7vw, 110px);
+    }
+
+    /* =====================================================
+       PRODUCT ROW
+    ===================================================== */
+
+    .Product-details-cont {
+        padding-top: 12px;
+        padding-bottom: 15px;
+    }
+
+    .prodimagexname img {
+        width: clamp(65px, 7vw, 80px);
+        height: clamp(65px, 7vw, 80px);
+    }
+
+    .Nameandcategory {
+        margin-top: 10px;
+        padding-left: 8px;
+    }
+
+    .Nameandcategory h3 {
+        font-size: clamp(17px, 2vw, 23px);
+    }
+
+    .Nameandcategory h1 {
+        font-size: clamp(11px, 1.3vw, 15px);
+    }
+
+    /* =====================================================
+       QUANTITY / TOTAL / ACTION
+    ===================================================== */
+
+    .quantitytotalaction {
+        gap: clamp(45px, 6vw, 95px);
+        padding-top: 25px;
+    }
+
+    .quantitytotalaction img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .quantincreasecont {
+        height: 27px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .quantincreasecont span {
+        font-size: 14px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .totalprice {
+        font-size: clamp(17px, 1.8vw, 21px);
+    }
+
+    /* =====================================================
+       ORDER SUMMARY
+    ===================================================== */
+
+    .Order-summary-cont {
+        /*
+           Keeps it around 30% of the available space
+           instead of a fixed 400px.
+        */
+        width: clamp(280px, 31vw, 370px);
+
+        flex: 0 0 auto;
+
+        padding: clamp(16px, 2vw, 22px);
+        padding-top: 20px;
+
+        border-radius: 17px;
+
+        border-style: solid;
+        border-color: rgba(84, 84, 84, 0.4);
+        border-width: 1px;
+
+        background-color: white;
+        color: black;
+    }
+
+    .order-title {
+        font-size: clamp(20px, 2.2vw, 25px) !important;
+        padding-bottom: 7px !important;
+    }
+
+    .totalChild {
+        padding-top: 15px;
+        padding-bottom: 8px;
+    }
+
+    .totalChild h1 {
+        font-size: clamp(19px, 2.2vw, 25px);
+    }
+
+    .totalChild h2 {
+        font-size: clamp(18px, 2vw, 23px);
+    }
+
+    .main-total-container {
+        margin-top: 5px;
+    }
+
+    .main-total-container h1 {
+        font-size: clamp(20px, 2.2vw, 25px);
+    }
+
+    .main-total-container h2 {
+        font-size: clamp(20px, 2.2vw, 25px);
+    }
+
+    /* =====================================================
+       CHECKOUT BUTTON
+    ===================================================== */
+
+    .checkout {
+        width: 85%;
+
+        margin: 8px auto 0;
+
+        display: block;
+
+        padding: 12px 15px;
+
+        font-size: clamp(11px, 1.2vw, 14px);
+
+        border-radius: 22px;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-section {
+        display: flex;
+
+        width: calc(100% - 50px);
+
+        margin-left: 25px;
+        margin-bottom: 35px;
+
+        padding: 0 20px 20px;
+
+        border-radius: 20px;
+
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-column-a,
+    .footer-column-b,
+    .footer-column-c,
+    .footer-column-d {
+        min-width: 0;
+    }
+
+    .footer-column-b,
+    .footer-column-c {
+        flex-shrink: 1;
+    }
+
+    .footer-column-d {
+        max-width: 300px;
+    }
+
+    .footer-column-b span,
+    .footer-column-c span {
+        font-size: 12px;
+    }
+
+    .footer-tagline {
+        font-size: 11px !important;
+    }
+
+    .mail h1 {
+        font-size: 12px;
+    }
+
+    .footer-column-d h2 {
+        font-size: 21px !important;
+    }
+
+    .footer-column-d p {
+        font-size: 11px;
+    }
+
+    .subscribe {
+        width: 100%;
+    }
+
+    /* =====================================================
+       HIDE MOBILE ELEMENTS
+    ===================================================== */
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    .mobile-dropdown {
+        display: none !important;
+    }
+
+    .footer-section-mobile {
+        display: none !important;
+    }
+
+    .quantitytotalaction {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: clamp(25px, 4vw, 60px);
+
+        padding-top: 25px;
+
+        white-space: nowrap;
+    }
+
+    .quantincreasecont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+
+        width: auto;
+        min-width: 75px;
+        height: 28px;
+
+        padding: 0 5px;
+
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    .quantincreasecont span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        font-size: 15px;
+
+        padding: 0 6px;
+
+        white-space: nowrap;
+    }
+
+    .totalprice {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 18px;
+    }
+
+    .deleteIcon {
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .deleteIcon img {
+        width: 22px;
+        height: 22px;
+        display: block;
+    }
+}

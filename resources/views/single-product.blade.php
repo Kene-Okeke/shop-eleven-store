@@ -269,7 +269,7 @@
                     <h4>/5</h4>
                 </div>
 
-                <h3>(50 New Reviews)</h3>
+                <h3 style="padding-top:20px">(50 New Reviews)</h3>
 
             </div>
 
