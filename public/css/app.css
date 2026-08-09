@@ -8,6 +8,23 @@ html {
     scroll-behavior: smooth;
 }
 
+.bag-widget {
+    overflow: hidden;
+}
+
+.bag-widget.sliding .black-bag,
+.bag-widget.sliding .play-bag-stack {
+    opacity: 0;
+    transform: translateX(-25px);
+}
+
+.black-bag,
+.play-bag-stack {
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
 body {
     font-family: "Bodoni Moda", serif;
 }
@@ -238,11 +255,13 @@ nav {
     margin-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+    width: 115px;
 }
 
 .play-bag-stack h1 {
-    font-size: 23px;
+    font-size: 18px;
     color: white;
+    white-space: nowrap;
 }
 
 .play-bag-stack h3 {
@@ -1968,6 +1987,12 @@ nav {
         width: 100%;
         margin-top: 30px;
         min-width: 0;
+    }
+
+    .arrow-icon {
+        width: 9px;
+        height: 9px;
+        margin-top: 18px;
     }
 
     .cat-column-1,

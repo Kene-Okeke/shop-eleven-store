@@ -17,7 +17,10 @@ class HomeController extends Controller
         //talk to the category model to pull all categories
         $categories = Category::take(4)->get();
 
-        $bagProducts = Product::where('category_Id', 1)->get(); //cotinue
+        $bagCategory = Category::where('name', 'Bags')->first();
+
+        $bagProducts = Product::where('category_Id', $bagCategory->id)
+            ->get();
        
 
         return view('home',compact('popularProducts', 'categories', 'bagProducts'));

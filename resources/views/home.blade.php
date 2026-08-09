@@ -118,15 +118,18 @@
            
         </div>
 
-       <a href="/shop">
+       <script>
+            const bagProducts = @json($bagProducts);
+       </script>
+
         <div class="bag-widget">
-            <img src="/images/pink-bag.jpg" alt="bag-image" class="black-bag">
+            <img src="{{ $bagProducts[0]->image_url }}" alt="bag-image" class="black-bag">
 
             <div class="knitted-bag-container">
 
                 <div class="play-bag-stack">
-                    <h1 class="play-bag">Play bag</h1>
-                    <h3 class= "price">100GH</h3>
+                    <h1 class="play-bag">{{ $bagProducts[0]->name }}</h1>
+                    <h3 class= "price"> GH₵{{ $bagProducts[0]->price }}</h3>
                 </div>
 
                 <div class="arrow-icon">
@@ -134,7 +137,7 @@
                 </div>
             </div>
         </div>
-        </a>
+        
     </section>
      </section>
    
@@ -142,7 +145,7 @@
 
     <!-- This is the popular collection section + the footer -->
 
-    <section class = "Popular-collection-section">
+    <section class = "Popular-collection-section" id="popular">
 
         <div class="Home-mini-shop-page">
 
@@ -273,20 +276,29 @@
         <div class="footer-section">
 
             <div class="footer-column-a">
-                <div class="logo-footer" style="margin-top:13px;">
+                <div class="logo-footer" style="margin-top:4px;">
                     <img src="images/shopelevenlogo.png" alt="shop-logo" >
-                    <h1 class="shop-text">ShopEleven</h1>
+                    <h1 class="shop-text" style="margin-top:10px;">ShopEleven</h1>
 
                 </div>
 
                 <h1 class="footer-tagline" style="font-size:12px;">Explore our most-loved <br>collection of stylish home </h1>
 
                 <div class="social-icons">
-                    <img src="images/instagram-icon.png" alt="instagram-icon">
-                    <img src="images/snapchat-icon.png" alt="snapchat-icon">
-                    <img src="images/whatsapp-icon.png" alt="whatsapp-icon">
-                    <img src="images/tiktok-icon.png" alt="tiktok-icon">
-                
+                    <a href="https://www.instagram.com/shop__eleven__">
+                        <img src="images/instagram-icon.png" alt="instagram-icon">
+                    </a>
+                    <a href="https://snapchat.com/t/GpcPf6pJ" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/snapchat-icon.png" alt="Snapchat">
+                    </a>
+
+                    <a href="https://wa.me/233592128637" target="_blank" rel="noopener noreferrer">
+                            <img src="images/whatsapp-icon.png" alt="whatsapp-icon">
+                    </a>
+
+                    <a href="https://www.tiktok.com/@shop__eleven">
+                        <img src="images/tiktok-icon.png" alt="tiktok-icon">
+                    </a>
                 </div>
 
                 <div class="mail">
@@ -301,11 +313,11 @@
 
             <div class="footer-column-b">
 
-                <span class = "Menu-footer" style=" font-weight:bold; padding-bottom:10px; padding-top:2px; margin-top:13px;">Menu</span>
-                <span>Home</span>
-                <span style="color:grey;">Shop</span>
-                <span style="color:grey;">Account</span>
-                <span style="color:grey;">Cart</span>
+<!----><span class = "Menu-footer" style=" font-weight:bold; padding-bottom:8px; padding-top:2px; margin-top:14px;"><a href="/">Menu</a></span>
+               <a href="/"> <span>Home</span> </a>
+                <a href="/shop"><span style="color:grey;">Shop</span></a>
+               <a href="#popular"><span style="color:grey;">Popular</span></a>
+               <a href="/cart"> <span style="color:grey;">Cart</span></a>
                 
 
             </div>
@@ -318,16 +330,22 @@
                 <span class="phone-number" style=" font-weight:bold; padding-bottom:10px; line-height:10px;">+(233) 592-128-637</span>
 
             </div>
-
+    
             <div class="footer-column-d">
-                <h2 style="font-size:27px; padding-bottom:12px; "> Subscribe to our newsletter</h2>
 
-                <form class="subscribe">
-                    <input type="email" placeholder="Email">
-                    <button type="submit">Subscribe</button>
-                </form>
+                <h2 style="font-size:27px; padding-bottom:12px;">
+                     <a href="/shop">Shop with us</a>
+                 </h2>
 
-                <p style="padding-top:10px;">Subscribe to our newsletter to be the first to know <br> about news and offers</p>
+                <p style="padding-top:10px; padding-bottom:15px;">
+                    Find something you love?
+                    <br>
+                    Place your order with us on WhatsApp.
+                </p>
+
+                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:purple">
+                    Order on WhatsApp
+                </a>
 
             </div>
 
@@ -345,7 +363,7 @@
             <div class="footer-links-mobile">
                 <a href="/">Home</a>
                 <a href="/shop">Shop</a>
-                <a href="#girl-image">Popular</a>
+                <a href="#popular">Popular</a>
                 <a href="/cart">Cart</a>
              </div>
 
@@ -363,7 +381,9 @@
                     <div class="social-links">
                          <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
                         <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
-                         <a href="#whatsapp"><img src="/images/whatsapp-icon.png" alt="whatsapp"></a>
+                        <a href="https://wa.me/233592128637" target="_blank" rel="noopener noreferrer">
+                            <img src="images/whatsapp-icon.png" alt="whatsapp-icon">
+                        </a>
                         <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
                     </div>
                 </div>
