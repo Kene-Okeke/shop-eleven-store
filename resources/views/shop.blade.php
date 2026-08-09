@@ -11,9 +11,11 @@
 <body>
     <!-- this is the nav bar section-->
         <nav>
-            <div class="menu-image-single">
-                <img src="/images/menu-bar.png" alt="menu-bar" >
-            </div>
+             <a href="/"> 
+                <div class="menu-image-single">
+                    <img src="/images/buy.png" alt="menu-bar" >
+                </div>
+            </a>
 
             <div class="logo">
 
@@ -79,10 +81,10 @@
 
     <div class="men-women-children">
 
-        <a href="/cart"><h3 class="men">Bags</h3></a>
+        <a href="/shop"><h3 class="men">All</h3></a>
         <a href="/"><h3 class="women">Home</h3></a>
-        <h3 class=" children">Electronics</h3>
-        <h3 class="Brands">Beauty</h3>
+      <a href="/#popular"><h3 class=" children">Popular</h3></a>
+       
 
     </div>
 

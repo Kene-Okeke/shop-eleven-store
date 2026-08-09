@@ -12,17 +12,18 @@
 
 <!-- this is the nav bar section-->
         <nav class="desktop-nav">
-            <div class="menu-image-single">
-                <img src="/images/menu-bar.png" alt="menu-bar" >
-            </div>
+            <a href="/shop"> 
+                <div class="menu-image-single">
+                    <img src="/images/buy.png" alt="menu-bar" >
+                </div>
+            </a>
+                <div class="logo">
 
-            <div class="logo">
+                   <img src="/images/shopelevenlogo.png" alt="shop-logo" class="shop-logo">
+                    <h1 class="shop-eleven-text">ShopEleven</h1>
 
-                <img src="/images/shopelevenlogo.png" alt="shop-logo" class="shop-logo">
-                <h1 class="shop-eleven-text">ShopEleven</h1>
-
-            </div>
-
+                </div>
+            
             <div class="right-nav-section">
                 <ul class="right-nav-items">
                     <li><a href="">About</a></li>
@@ -89,11 +90,11 @@
         </div>
 
 <!--This will be right under the nav bar with the search icons-->
-
-<section class="back-arrow">
-    <span>← Home . Product details</span>
-</section>
-
+<a href="/">
+    <section class="back-arrow">
+        <span>← Home . Product details</span>
+    </section>
+</a>
 <!--This is the product section with the picture on one side and details on the other -->
 <!-- This is the two-column section-->
 
@@ -101,9 +102,9 @@
 
     <!-- This is the image on the left -->
 
-    <div class="product-two-column-wrapper">
+    <div class="product-two-column-wrapper" data-category-id="{{$product->category->id}}"   data-product-id="{{ $product->id }}">
 
-         <div class="image-left">
+         <div class="image-left" >
             <img src="{{$product->image_url}}" alt="tote-bag">
         </div>
 
@@ -112,14 +113,14 @@
             <div class="men-delivery-block">
 
                 <div class="single-category-button">
-                <h3>{{ $product->category->name }}</h3>
+                <h3 style="color:black; background-color:white; border-color:#F7A8B8  ; border-width: 0.1px;";>{{ $product->category->name }}</h3>
             </div>
 
-            <h1>{{$product->name}}</h1>
+            <h1 style="color:#4A2C20;">{{$product->name}}</h1>
 
-            <span class="product-price">GH₵{{$product->price}}</span>
+            <span class="product-price" style="color:#5A3825;">GH₵{{$product->price}}</span>
 
-            <div class="caution">
+            <div class="caution" >
                 <img src="/images/caution-icon.png" alt="caution-sign">
                 <span> Free delivery at the University of Ghana </span>
             </div>
@@ -130,7 +131,7 @@
 
            
             
-            <div class="Addtocart">
+            <div class="Addtocart" >
 
                 <button class="addtocart-button"
                 data-id="{{$product->id}}"
@@ -148,7 +149,7 @@
 
         </div>
 
-        <div class="description-section">
+        <div class="description-section" style=" color:white; background-color: #6B4636">
 
             <div class="Description-and-Fit">
 
@@ -159,12 +160,12 @@
 
            
 
-            <p>{{$product->description}}<br>
+            <p class="des-tab" style=" color:white;">{{$product->description}}<br>
             </p>
 
         </div>
 
-        <div class="shipping-and-delivery-details">
+        <div class="shipping-and-delivery-details" >
 
             <div class="Shipping-and-arrow">
 
@@ -266,7 +267,7 @@
 
                 <div class="rating-flex">
                     <h1>4.5</h1>
-                    <h4>/5</h4>
+                    <h4 style="color:black">/5</h4>
                 </div>
 
                 <h3 style="padding-top:20px">(50 New Reviews)</h3>
@@ -319,7 +320,7 @@
                     </div>
 
                     <div class="fill-container">
-                     <div class="fill" style="width:5%;"></div>
+                     <div class="fill" style="width:5%; color:#65483C;"></div>
 
                     </div>
                 </div>
@@ -340,7 +341,7 @@
         </div>
 
         <div class="review-block">
-            <span>Okeke Kene</span>
+            <span>Jabachi Blossom</span>
 
             <div class="date-flex">
                 <span>⭐️    ⭐️    ⭐️    ⭐️    ⭐️</span>
@@ -360,7 +361,7 @@
             </div>
 
             <div class="image-of-reviewer">
-                <img src="/images/review-picture.png" alt="reviewer-image">
+                <img src="/images/review.png" alt="reviewer-image">
 
             </div>
 
@@ -374,34 +375,11 @@
 
 <!--YOU MIGHT ALSO LIKE SECTION-->
 
-<div class="You-might-also-like">
-    <h1>You might also like</h1>
+<div class="You-might-also-like" id="like">
+    <h1 style="color:#6B4636;">You might also like</h1>
 
     <div class="might-like-images">
-        <div class="image">
-            <img src="/images/powerbank.jpg" alt="powerbank">
-
-            <span style="font-weight:900; font-size:17px; padding-top:13px">Green 100Hz Powerbank</span>
-            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
-        </div>
-        <div class="image">
-            <img src="/images/pink-summer-vibes.jpg" alt="pink-bag">
-
-            <span style="font-weight:900; font-size:17px; padding-top:13px">Pink Summer Vibes Tote bag</span>
-            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
-        </div>
-        <div class="image">
-            <img src="/images/hotplate.jpg" alt="hot-plate">
-
-            <span style="font-weight:900; font-size:17px; padding-top:13px">Hot-plate Cooker</span>
-            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">350gh</span>
-        </div>
-        <div class="image">
-            <img src="/images/bedtables.jpg" alt="bedtables">
-
-            <span style="font-weight:900; font-size:17px; padding-top:13px">Bed Study Table</span>
-            <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">100gh</span>
-        </div>
+        
     </div>
 </div>
 
@@ -419,11 +397,18 @@
                 <h1 class="footer-tagline" style="font-size:12px;">Explore our most-loved <br>collection of stylish home </h1>
 
                 <div class="social-icons">
-                    <img src="/images/instagram-icon.png" alt="instagram-icon">
-                    <img src="/images/snapchat-icon.png" alt="snapchat-icon">
-                    <img src="/images/whatsapp-icon.png" alt="whatsapp-icon">
-                    <img src="/images/tiktok-icon.png" alt="tiktok-icon">
-                
+                    <a href="https://www.instagram.com/shop__eleven__">
+                        <img src="/images/instagram-icon.png" alt="instagram-icon">
+                    </a>
+                    <a href="https://snapchat.com/t/GpcPf6pJ" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/snapchat-icon.png" alt="snapchat-icon">
+                    </a>
+                    <a href="https://wa.me/233592128637" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/whatsapp-icon.png" alt="whatsapp-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/@shop__eleven">
+                        <img src="/images/tiktok-icon.png" alt="tiktok-icon">
+                    </a>
                 </div>
 
                 <div class="mail">
@@ -439,10 +424,10 @@
             <div class="footer-column-b">
 
                 <span class = "Menu-footer" style=" font-weight:bold; padding-bottom:10px; padding-top:2px; margin-top:13px;">Menu</span>
-                <span>Home</span>
-                <span style="color:grey;">Shop</span>
-                <span style="color:grey;">Account</span>
-                <span style="color:grey;">Cart</span>
+               <a href="/"> <span>Home</span></a>
+               <a href="/shop"><span style="color:grey;">Shop</span></a>
+                <a href="/shop"><span style="color:grey;">popular</span></a>
+                <a href="/cart" style="color:grey;"><span>Cart</span></a>
                 
 
             </div>
@@ -455,19 +440,23 @@
                 <span class="phone-number" style=" font-weight:bold; padding-bottom:10px; line-height:10px;">+(233) 592-128-637</span>
 
             </div>
+ <div class="footer-column-d">
 
-            <div class="footer-column-d">
-                <h2 style="font-size:27px; padding-bottom:12px; "> Subscribe to our newsletter</h2>
+                <h2 style="font-size:27px; padding-bottom:12px;">
+                     <a href="/shop" >Shop with us</a>
+                 </h2>
 
-                <form class="subscribe">
-                    <input type="email" placeholder="Email">
-                    <button type="submit">Subscribe</button>
-                </form>
+                <p style="padding-top:10px; padding-bottom:15px;">
+                    Find something you love?
+                    <br>
+                    Place your order with us on WhatsApp.
+                </p>
 
-                <p style="padding-top:10px;">Subscribe to our newsletter to be the first to know <br> about news and offers</p>
+                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:#b10443;">
+                    Order on WhatsApp
+                </a>
 
             </div>
-
         </div>
 
         <div class="footer-section-mobile">

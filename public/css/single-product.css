@@ -125,7 +125,7 @@ body {
 
 .menu-image-single img {
     width: 35px;
-    height: 25px;
+    height: 35px;
 }
 
 .container-search {
@@ -155,8 +155,8 @@ body {
     border-radius: 20px;
     font-size: 16px;
     padding: 7px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 43px;
+    padding-right: 43px;
 }
 
 .categories-search-box {
@@ -293,7 +293,7 @@ body {
 }
 
 .back-arrow span {
-    color: #8b5e3c;
+    color: #4a2c20;
 }
 
 .image-left {
@@ -739,7 +739,7 @@ body {
 }
 
 .addtocart-button {
-    background-color: black;
+    background-color: #b10443;
     color: white;
     width: 620px;
     padding: 15px;

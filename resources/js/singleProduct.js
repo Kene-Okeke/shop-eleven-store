@@ -98,3 +98,39 @@ function load_cart_single_nav() {
         }
     });
 }
+
+const categoryId = document.querySelector(".product-two-column-wrapper").dataset
+    .categoryId;
+
+const productId = document.querySelector(".product-two-column-wrapper").dataset
+    .productId;
+
+console.log(categoryId);
+
+mightlike(categoryId, productId);
+
+async function mightlike(category_id, currentProductId) {
+    const response = await fetch(`/api/categories/${category_id}/products`);
+
+    const products = await response.json();
+
+    const threeProducts = products.data
+        .filter((product) => product.id != currentProductId)
+        .slice(0, 4);
+
+    const mightLike = document.querySelector(".might-like-images");
+
+    threeProducts.forEach((product) => {
+        mightLike.innerHTML += `
+           
+                <div class="image" data-product-id = "${product.id}" id="mightLike">
+                 <a href="/products/${product.id}"> 
+                    <img src=${product.image_url} alt="powerbank">
+                </a>
+                    <span style="font-weight:900; font-size:17px; padding-top:13px">${product.name}</span>
+                    <span style="font-weight:light; font-size:14px; padding-top:3px; color:#939393">GH₵${product.price}</span>
+                </div>
+           
+        `;
+    });
+}
