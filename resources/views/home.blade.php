@@ -379,24 +379,31 @@
                 <div class="footer-socials-mobile">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                         <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
-                        <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
+                         <a href="https://www.instagram.com/shop__eleven__"><img src="/images/instagram-icon.png" alt="instagram"></a>
+                        <a href="https://snapchat.com/t/GpcPf6pJ"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
                         <a href="https://wa.me/233592128637" target="_blank" rel="noopener noreferrer">
                             <img src="images/whatsapp-icon.png" alt="whatsapp-icon">
                         </a>
-                        <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
+                        <a href="https://www.tiktok.com/@shop__eleven"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
                     </div>
                 </div>
 
             <!-- Newsletter -->
-                <div class="footer-newsletter-mobile">
-                    <h3>Newsletter</h3>
-                    <p>Get updates on new products & offers</p>
-        
-                    <form class="newsletter-form-mobile">
-                        <input type="email" placeholder="Your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
+               <div class="footer-newsletter-mobile">
+                    <h3>Shop with us</h3>
+
+                    <p>
+                        Find something you love?
+                    <br>
+                         Place your order with us on WhatsApp.
+                    </p>
+
+                     <a href="https://wa.me/233592128637"
+                      target="_blank"
+                        rel="noopener noreferrer"
+                    class="footer-whatsapp">
+                    Order on WhatsApp
+                     </a>
                 </div>
 
             <!-- Copyright -->
