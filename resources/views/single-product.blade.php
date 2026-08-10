@@ -116,9 +116,9 @@
                 <h3 style="color:black; background-color:white; border-color:#F7A8B8  ; border-width: 0.1px;";>{{ $product->category->name }}</h3>
             </div>
 
-            <h1 style="color:#4A2C20;">{{$product->name}}</h1>
+            <h1 style="color:black;">{{$product->name}}</h1>
 
-            <span class="product-price" style="color:#5A3825;">GH₵{{$product->price}}</span>
+            <span class="product-price" style="color:black;">GH₵{{$product->price}}</span>
 
             <div class="caution" >
                 <img src="/images/caution-icon.png" alt="caution-sign">

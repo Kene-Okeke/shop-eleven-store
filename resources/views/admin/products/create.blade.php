@@ -29,7 +29,7 @@
             </div>
         @endif
 
-        <form action='/admin/products/' method="POST" enctype="multipart/form-data" class="create-product-form">
+        <form action='/admin/products' method="POST" enctype="multipart/form-data" class="create-product-form">
 
         @csrf
         <div class="Productlabel_Input">

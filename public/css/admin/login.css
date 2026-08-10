@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bodoni Moda", serif;
+    background: #f8f1ed;
+    color: #4a2c20;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+   MAIN PAGE
+======================================== */
+
+.admin-login-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(248, 187, 208, 0.25),
+            transparent 30%
+        ),
+        #f8f1ed;
+}
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.admin-login-card {
+    width: 100%;
+    max-width: 450px;
+
+    background: #fffaf8;
+
+    padding: 48px 45px 35px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(74, 44, 32, 0.08);
+
+    box-shadow: 0 25px 70px rgba(74, 44, 32, 0.1);
+}
+
+/* ========================================
+   BRAND
+======================================== */
+
+.admin-brand {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.admin-logo {
+    width: 62px;
+    height: 62px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.admin-brand h1 {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.admin-brand p {
+    margin-top: 5px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #a98578;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.login-heading {
+    margin-bottom: 28px;
+}
+
+.login-heading h2 {
+    font-size: 25px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.login-heading p {
+    font-size: 14px;
+    color: #9b8177;
+}
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.admin-login-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #4a2c20;
+}
+
+.input-group input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 1px solid #dfd1ca;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #4a2c20;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #b9aaa4;
+}
+
+.input-group input:focus {
+    border-color: #c98d9e;
+
+    box-shadow: 0 0 0 3px rgba(248, 187, 208, 0.25);
+}
+
+/* ========================================
+   REMEMBER / FORGOT
+======================================== */
+
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 4px 0 25px;
+
+    font-size: 12px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #8f7970;
+
+    cursor: pointer;
+}
+
+.remember-me input {
+    accent-color: #4a2c20;
+
+    cursor: pointer;
+}
+
+.login-options > a {
+    color: #9d6475;
+
+    transition: color 0.2s ease;
+}
+
+.login-options > a:hover {
+    color: #4a2c20;
+}
+
+/* ========================================
+   LOGIN BUTTON
+======================================== */
+
+.login-button {
+    width: 100%;
+    height: 53px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #4a2c20;
+    color: #f8d7df;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+    background: #5c392b;
+
+    box-shadow: 0 10px 25px rgba(74, 44, 32, 0.18);
+
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.admin-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 32px;
+
+    font-size: 11px;
+
+    color: #b09d95;
+}
+
+.admin-footer span:first-child {
+    color: #795548;
+    font-weight: 600;
+}
+
+/* ========================================
+   LARGE PHONES
+======================================== */
+
+@media (min-width: 480px) and (max-width: 599px) {
+    .admin-login-page {
+        padding: 35px 30px;
+    }
+
+    .admin-login-card {
+        max-width: 440px;
+
+        padding: 48px 42px 35px;
+    }
+}
+
+/* ========================================
+   PORTRAIT TABLET
+======================================== */
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .admin-login-page {
+        padding: 50px 40px;
+    }
+
+    .admin-login-card {
+        max-width: 480px;
+
+        padding: 55px 50px 40px;
+
+        border-radius: 26px;
+    }
+
+    .admin-logo {
+        width: 68px;
+        height: 68px;
+    }
+
+    .admin-brand h1 {
+        font-size: 30px;
+    }
+
+    .login-heading h2 {
+        font-size: 27px;
+    }
+
+    .input-group input {
+        height: 55px;
+    }
+
+    .login-button {
+        height: 55px;
+    }
+}
+
+/* ========================================
+   LANDSCAPE TABLET
+======================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .admin-login-page {
+        padding: 40px;
+    }
+
+    .admin-login-card {
+        max-width: 470px;
+
+        padding: 50px 48px 38px;
+    }
+
+    .admin-logo {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* ========================================
+   LAPTOP / DESKTOP
+======================================== */
+
+@media (min-width: 1025px) {
+    .admin-login-page {
+        padding: 60px;
+    }
+
+    .admin-login-card {
+        max-width: 460px;
+
+        padding: 52px 48px 38px;
+    }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 390px) {
+    .admin-login-page {
+        padding: 20px 15px;
+    }
+
+    .admin-login-card {
+        padding: 35px 22px 28px;
+
+        border-radius: 20px;
+    }
+
+    .admin-brand {
+        margin-bottom: 30px;
+    }
+
+    .admin-logo {
+        width: 54px;
+        height: 54px;
+    }
+
+    .admin-brand h1 {
+        font-size: 24px;
+    }
+
+    .login-heading h2 {
+        font-size: 22px;
+    }
+
+    .login-heading p {
+        font-size: 13px;
+    }
+
+    .input-group input {
+        height: 50px;
+    }
+
+    .login-button {
+        height: 51px;
+    }
+
+    .login-options {
+        font-size: 11px;
+    }
+}

@@ -13,7 +13,7 @@ export function load_cart_nav() {
 
     if (!cart) {
         cart_navs.forEach((cart_nav) => {
-            cart.nav.style.display = "none";
+            cart_nav.style.display = "none";
         });
         return;
     }

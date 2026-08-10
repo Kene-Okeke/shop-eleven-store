@@ -1,23 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #ff4d8d;
+    --pink-light: #fff0f5;
+    --pink-soft: #ffe1eb;
+    --brown: #5a3028;
+    --brown-dark: #3d211c;
+    --cream: #fffaf7;
+    --white: #ffffff;
+    --text: #2f211f;
+    --muted: #806d69;
+    --border: #ead9d5;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+/* =========================
+   CREATE FORM
+========================= */
+
+.create-form-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 40px;
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(90, 48, 40, 0.08);
+}
+
+.create_text {
+    margin: 0 0 30px;
+    font-family: "Bodoni Moda", serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--brown-dark);
+}
+
+/* =========================
+   SUCCESS / ERRORS
+========================= */
+
+.success-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #eaf7ed;
+    color: #26733b;
+    font-size: 14px;
+}
+
+.error-message {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #fff0f2;
+    color: #b4233c;
+    font-size: 14px;
+}
+
+.error-message p {
+    margin: 4px 0;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.create-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create-product-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brown-dark);
+}
+
+/* =========================
+   INPUT GROUPS
+========================= */
+
+.Productlabel_Input,
+.descriptionlabelandInput,
+.category_dropdown,
+.price-container,
+.upload-image-container {
+    width: 100%;
+}
+
+.Productlabel_Input,
+.price-container,
+.category_dropdown {
+    padding-bottom: 0;
+}
+
+.descriptionlabelandInput {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.create-form-container input[type="text"],
+.create-form-container input[type="number"],
+.create-form-container input[type="file"],
+.create-form-container textarea,
+.create-form-container select {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.create-form-container textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.create-form-container input:focus,
+.create-form-container textarea:focus,
+.create-form-container select:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px rgba(255, 77, 141, 0.1);
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category_dropdown select {
+    cursor: pointer;
+}
+
+#openCategoryModal {
+    align-self: flex-start;
+    padding: 9px 14px;
+    border: 1px solid var(--pink);
+    border-radius: 7px;
+    background: var(--pink-light);
+    color: var(--pink);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#openCategoryModal:hover {
+    background: var(--pink);
+    color: var(--white);
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.upload-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.create-form-container input[type="file"] {
+    padding: 9px;
+    cursor: pointer;
+    background: var(--pink-light);
+}
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured-product {
+    padding: 14px 16px;
+    background: var(--pink-light);
+    border: 1px solid var(--pink-soft);
+    border-radius: 9px;
+}
+
+.featured-product label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+}
+
+.featured-product input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--pink);
+}
+
+/* =========================
+   SUBMIT
+========================= */
+
+.product_submit {
+    width: 100%;
+    padding: 13px 20px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    background: var(--brown-dark);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.product_submit:hover {
+    background: var(--pink);
+}
+
+/* =========================
+   CATEGORY MODAL
+   KEEPING YOUR FUNCTIONALITY
+========================= */
+
+#categoryModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 25, 22, 0.55);
+    z-index: 1000;
+}
+
+.category-modal-content {
+    width: 400px;
+    max-width: calc(100% - 30px);
+    margin: 100px auto;
+    padding: 40px;
+    background-color: var(--pink);
+    border-radius: 18px;
+    color: white;
+}
+
 .close_and_title_container {
     display: flex;
-    width: 300px;
+    width: 100%;
     gap: 30px;
     padding-bottom: 10px;
     align-items: center;
 }
 
-.category-label-container{
+.category-label-container {
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
-#category-name{
-    width: 200px;
-}
-
-body {
-   font-family: 'Bodoni Moda', serif;
+#category-name {
+    width: 100%;
 }
 
 .description-label-container {
@@ -26,111 +303,74 @@ body {
     flex-direction: column;
 }
 
-#category-description{
+#category-description {
     height: 100px;
-    width: 300px;
-}
-
-.create_text{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-
-/* Added modal behavior */
-#categoryModal{
-    display: none; /* hidden by default */
-
-    position: fixed; /* floats above the page */
-    top: 0;
-    left: 0;
-
     width: 100%;
-    height: 100%;
-
-    background: rgba(0,0,0,0.5); /* dark overlay */
-
-    z-index: 1000;
 }
 
-
-/* Added because the pink box is now inside the modal */
-.category-modal-content {
-
-    padding: 40px;
-    background-color: #FF4D8D;
-    width: 400px;
-    border-radius: 25px;
-    color: white;
-
-    margin: 100px auto;
-}
-
-
-#closeCategoryModal{
+#closeCategoryModal {
     padding: 10px;
     cursor: pointer;
 }
 
-.submit_category{
-    padding: 10px;
-    background-color: black;
+.submit_category {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--brown-dark);
     color: white;
     cursor: pointer;
 }
 
-.create-form-container{
-    padding: 20px;
-    background-color: brown;
-    width: 300px;
-    color: white;
-    border-radius: 20px;
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .create-form-container {
+        margin: 15px auto;
+        padding: 30px;
+    }
 }
 
-.Productlabel_Input{
-    padding-bottom: 10px;
-}
+/* =========================
+   PHONES
+========================= */
 
-.descriptionlabelandInput{
-    display: flex;
-    flex-direction: column;
-}
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
 
-.category_dropdown{
-     padding-bottom: 10px;
-}
+    .create-form-container {
+        margin: 10px auto;
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
 
-body{
-    padding: 20px;
-}
+    .create_text {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
 
-.price-container{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+    .create-product-form {
+        gap: 17px;
+    }
 
-.upload-image-container{
-    display: flex;
-    gap: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+    .create-form-container input[type="text"],
+    .create-form-container input[type="number"],
+    .create-form-container input[type="file"],
+    .create-form-container textarea,
+    .create-form-container select {
+        font-size: 14px;
+    }
 
-.create-form-container input{
-    height: 30px;
-    border-radius: 5px;
-}
-
-.product_submit{
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-#Description{
-    height: 10vh;
+    .category-modal-content {
+        padding: 25px 20px;
+        margin: 70px auto;
+    }
 }
