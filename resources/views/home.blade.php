@@ -128,7 +128,7 @@
             <div class="knitted-bag-container">
 
                 <div class="play-bag-stack">
-                    <h1 class="play-bag">{{ $bagProducts[0]->name }}</h1>
+                    <h1 class="play-bag" style="padding-bottom:2px;">{{ $bagProducts[0]->name }}</h1>
                     <h3 class= "price"> GH₵{{ $bagProducts[0]->price }}</h3>
                 </div>
 

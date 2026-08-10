@@ -28,7 +28,11 @@
                 <p>Sign in to manage your store.</p>
             </div>
 
-
+            @if($errors->any())
+                <div class="error-message">
+                    {{ $errors->first() }}
+                </div>
+            @endif
             <form class="admin-login-form" action="/login" method="POST">
                 @csrf
 

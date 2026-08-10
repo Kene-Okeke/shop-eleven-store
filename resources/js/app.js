@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const searchInputs = document.querySelectorAll(
-        "#mobile-search-input,#search-input",
+        "#mobile-search-input, #search-input, .categories-search-box, .product-search-box",
     );
 
     console.log("search input:", searchInputs);

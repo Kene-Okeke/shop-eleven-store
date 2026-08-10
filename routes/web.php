@@ -29,10 +29,18 @@ Route::middleware('auth')->group(function (){
         return view('admin.categories.create-modal');
     });
 
-    Route::get('/admin' ,function(){
-        return view('admin.dashboard');
-    });
+    Route::get('/admin' ,[ProductController::class, 'admin']);
     
+    
+    Route::get('/admin/products',[ProductController::class, 'adminIndex']); //this is the route to view products in the admin page
+
+    Route::get('/admin/products/{id}/edit',[ProductController::class, 'edit']);
+
+    Route::put('/admin/products/{id}',[ProductController::class, 'update']);
+
+    Route::delete('/admin/products/{id}', [ProductController::class, 'destroy']);
+
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
 

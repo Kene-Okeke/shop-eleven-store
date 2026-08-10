@@ -2,6 +2,60 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   ADMIN BACK NAV
+========================= */
+
+.admin-back-nav {
+    padding: 20px 25px;
+}
+
+.back-dashboard {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    background: #ffffff;
+    border: 1px solid #f0dfe5;
+    border-radius: 999px;
+
+    color: #6b443b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 4px 15px rgba(91, 48, 61, 0.06);
+
+    transition: 0.2s ease;
+}
+
+.back-dashboard span {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.back-dashboard:hover {
+    background: #ff4d8d;
+    border-color: #ff4d8d;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* MOBILE */
+
+@media (max-width: 599px) {
+    .admin-back-nav {
+        padding: 15px;
+    }
+
+    .back-dashboard {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+}
+
 :root {
     --pink: #ff4d8d;
     --pink-light: #fff0f5;

@@ -26,8 +26,8 @@
 
             <div class="right-nav-section">
                 <ul class="right-nav-items">
-                    <li><a href="">About</a></li>
-                    <li><a href="">FAQ's</a></li>
+                   <li><a href="https://wa.me/233592128637">Contact</a></li>
+                    <li><a href="https://wa.me/233592128637">Help</a></li>
                     <li class="single-cart-image">
                         <span class="cart-badge-nav">0</span>
                         <a href="/cart"> <img src="/images/cart-icon.png" alt="cart-icon" class="cart-bar"></a>
@@ -244,10 +244,12 @@
                 <h1 class="footer-tagline" style="font-size:12px;">Explore our most-loved <br>collection of stylish home </h1>
 
                 <div class="social-icons">
-                    <img src="/images/instagram-icon.png" alt="instagram-icon">
-                    <img src="/images/snapchat-icon.png" alt="snapchat-icon">
-                    <img src="/images/whatsapp-icon.png" alt="whatsapp-icon">
-                    <img src="/images/tiktok-icon.png" alt="tiktok-icon">
+                     <a href="https://www.instagram.com/shop__eleven__"><img src="/images/instagram-icon.png" alt="instagram"></a>
+                        <a href="https://snapchat.com/t/GpcPf6pJ"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
+                        <a href="https://wa.me/233592128637" target="_blank" rel="noopener noreferrer">
+                            <img src="images/whatsapp-icon.png" alt="whatsapp-icon">
+                        </a>
+                        <a href="https://www.tiktok.com/@shop__eleven"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
                 
                 </div>
 
@@ -282,14 +284,20 @@
             </div>
 
             <div class="footer-column-d">
-                <h2 style="font-size:27px; padding-bottom:12px; "> Subscribe to our newsletter</h2>
 
-                <form class="subscribe">
-                    <input type="email" placeholder="Email">
-                    <button type="submit">Subscribe</button>
-                </form>
+                <h2 style="font-size:27px; padding-bottom:12px;">
+                     <a href="/shop" >Shop with us</a>
+                 </h2>
 
-                <p style="padding-top:10px;">Subscribe to our newsletter to be the first to know <br> about news and offers</p>
+                <p style="padding-top:10px; padding-bottom:15px;">
+                    Find something you love?
+                    <br>
+                    Place your order with us on WhatsApp.
+                </p>
+
+                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:#b10443;">
+                    Order on WhatsApp
+                </a>
 
             </div>
 
@@ -306,7 +314,7 @@
             <div class="footer-links-mobile">
                 <a href="/">Home</a>
                 <a href="/shop">Shop</a>
-                <a href="#account">Account</a>
+                <a href="#account">Popular</a>
                 <a href="/cart">Cart</a>
              </div>
 
@@ -321,22 +329,37 @@
                 <div class="footer-socials-mobile">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                         <a href="#instagram"><img src="/images/instagram-icon.png" alt="instagram"></a>
-                        <a href="#snapchat"><img src="/images/snapchat-icon.png" alt="snapchat"></a>
-                         <a href="#whatsapp"><img src="/images/whatsapp-icon.png" alt="whatsapp"></a>
-                        <a href="#tiktok"><img src="/images/tiktok-icon.png" alt="tiktok"></a>
+                          <a href="https://www.instagram.com/shop__eleven__">
+                        <img src="/images/instagram-icon.png" alt="instagram-icon">
+                    </a>
+                    <a href="https://snapchat.com/t/GpcPf6pJ" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/snapchat-icon.png" alt="snapchat-icon">
+                    </a>
+                    <a href="https://wa.me/233592128637" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/whatsapp-icon.png" alt="whatsapp-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/@shop__eleven">
+                        <img src="/images/tiktok-icon.png" alt="tiktok-icon">
+                    </a>
                     </div>
                 </div>
 
             <!-- Newsletter -->
                 <div class="footer-newsletter-mobile">
-                    <h3>Newsletter</h3>
-                    <p>Get updates on new products & offers</p>
-        
-                    <form class="newsletter-form-mobile">
-                        <input type="email" placeholder="Your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
+                    <h3>Shop with us</h3>
+
+                    <p>
+                        Find something you love?
+                    <br>
+                         Place your order with us on WhatsApp.
+                    </p>
+
+                     <a href="https://wa.me/233592128637"
+                      target="_blank"
+                        rel="noopener noreferrer"
+                    class="footer-whatsapp">
+                    Order on WhatsApp
+                     </a>
                 </div>
 
             <!-- Copyright -->

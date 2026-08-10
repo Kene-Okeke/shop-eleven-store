@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <nav class="admin-back-nav">
+        <a href="/admin" class="back-dashboard">
+            <span>←</span>
+            Dashboard
+        </a>
+    </nav>
     
     <div class="create-form-container">
 

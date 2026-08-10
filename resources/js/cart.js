@@ -126,19 +126,21 @@ function renderOrderSummary(totalPrice, totalQuantity) {
 }
 
 function attachCheckoutListener() {
-    const checkoutButton = document.querySelector(".checkout");
+    const checkoutButtons = document.querySelectorAll(".checkout");
 
-    if (!checkoutButton) {
+    if (!checkoutButtons.length) {
         return;
     }
 
-    checkoutButton.addEventListener(
-        "click",
-        function () {
-            handleCheckout();
-        },
-        { once: true },
-    );
+    checkoutButtons.forEach((button) => {
+        button.addEventListener(
+            "click",
+            function () {
+                handleCheckout();
+            },
+            { once: true },
+        );
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

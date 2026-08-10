@@ -56,7 +56,7 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric',
-            'stock_quantity' => 'required|integer',
+            'stock_quantity' => 'nullable|integer',
             'image'=> 'required|image',
             'is_featured'=> 'nullable|boolean',
 
@@ -69,12 +69,82 @@ class ProductController extends Controller
             'description' => $validated['description'],
             'category_id' => $validated['category_id'],
             'price' => $validated['price'],
-            'stock_quantity' => $validated['stock_quantity'],
+            'stock_quantity' => $validated['stock_quantity'] ?? null,
             'image_url' => $imageUrl,
             'is_featured'=> $request->boolean('is_featured'),
         ]);
 
         return redirect()->back()->with('success', 'Product created successfully');
+
+    }
+
+    public function adminIndex(){
+
+        $products = Product::all();
+
+        return view('admin.products.view', compact('products'));
+    }
+
+    public function edit($id){
+
+        $product = Product::findOrFail($id);
+
+        $categories = Category::all();
+
+        return view('admin.products.edit',compact('product','categories'));
+    }
+
+    public function update(Request $request, $id)
+    {
+    $product = Product::findOrFail($id);
+
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'category_id' => 'required|exists:categories,id',
+        'price' => 'required|numeric',
+        'stock_quantity' => 'nullable|integer',
+        'image' => 'nullable|image',
+        'is_featured' => 'nullable|boolean',
+    ]);
+
+    $imageUrl = $product->image_url;
+
+    if ($request->hasFile('image')) {
+        $imageUrl = $this->cloudinaryService->upload($request->image);
+    }
+
+    $product->update([
+        'name' => $validated['name'],
+        'description' => $validated['description'],
+        'category_id' => $validated['category_id'],
+        'price' => $validated['price'],
+        'stock_quantity' => $validated['stock_quantity'] ?? null,
+        'image_url' => $imageUrl,
+        'is_featured' => $request->boolean('is_featured'),
+    ]);
+
+    return redirect('/admin/products')->with('success', 'Product updated successfully');
+    }
+
+    public function destroy($id)    
+    {
+        $product = Product::findOrFail($id);
+
+        $product->delete();
+
+        return redirect('/admin/products')
+         ->with('success', 'Product deleted successfully');
+    }
+
+    public function admin(){
+
+        $products = Product::all();
+
+        $categories = Category::all();
+
+        return view('admin.dashboard',compact('products','categories'));
+
 
     }
     

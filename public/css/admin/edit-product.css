@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   ADMIN BACK NAV
+========================= */
+
+.admin-back-nav {
+    padding: 20px 25px;
+}
+
+.back-dashboard {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    background: #ffffff;
+    border: 1px solid #f0dfe5;
+    border-radius: 999px;
+
+    color: #6b443b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 4px 15px rgba(91, 48, 61, 0.06);
+
+    transition: 0.2s ease;
+}
+
+.back-dashboard span {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.back-dashboard:hover {
+    background: #ff4d8d;
+    border-color: #ff4d8d;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* MOBILE */
+
+@media (max-width: 599px) {
+    .admin-back-nav {
+        padding: 15px;
+    }
+
+    .back-dashboard {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff7f9;
+    color: #3d2929;
+    padding: 40px 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.edit-product-container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #ead9dd;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 35px rgba(91, 52, 52, 0.08);
+}
+
+.edit-product-container h1 {
+    color: #6b3f3f;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #6b3f3f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    border: 1px solid #dfc9ce;
+    border-radius: 10px;
+    background: #fffafa;
+    color: #3d2929;
+    padding: 13px 14px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    height: 46px;
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #ff4d8d;
+    box-shadow: 0 0 0 3px rgba(255, 77, 141, 0.1);
+    background: #ffffff;
+}
+
+/* =========================
+   CURRENT IMAGE
+========================= */
+
+.current-product-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #ead9dd;
+    background: #fff7f9;
+}
+
+/* =========================
+   FILE INPUT
+========================= */
+
+.form-group input[type="file"] {
+    padding: 10px;
+    background: #fff7f9;
+    cursor: pointer;
+}
+
+/* =========================
+   FEATURED
+========================= */
+
+.form-group label:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.form-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff4d8d;
+    cursor: pointer;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button[type="submit"] {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    background: #6b3f3f;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+    background: #ff4d8d;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+    body {
+        padding: 30px 18px;
+    }
+
+    .edit-product-container {
+        padding: 32px;
+    }
+}
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 599px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .edit-product-container {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .edit-product-container h1 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .current-product-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group select {
+        height: 44px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .edit-product-container {
+        padding: 20px 15px;
+    }
+
+    .edit-product-container h1 {
+        font-size: 23px;
+    }
+
+    .current-product-image {
+        width: 120px;
+        height: 120px;
+    }
+}

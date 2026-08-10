@@ -28,26 +28,15 @@
                     Dashboard
                 </a>
 
-                <a href="#" class="nav-item">
-                    <span class="nav-icon">▣</span>
-                    Products
-                </a>
-
-                <a href="#" class="nav-item">
-                    <span class="nav-icon">◫</span>
-                    Categories
-                </a>
+               
 
             </nav>
 
             <div class="sidebar-bottom">
 
-                <a href="#" class="nav-item">
-                    <span class="nav-icon">⚙</span>
-                    Settings
-                </a>
+                
 
-                <form method="POST" action="#">
+                <form method="POST" action="/logout">
                     @csrf
 
                     <button type="submit" class="logout-button">
@@ -67,9 +56,26 @@
             <!-- TOP BAR -->
             <header class="admin-header">
 
-                <button class="mobile-menu-button" type="button">
-                    ☰
-                </button>
+                <div class="mobile-menu-wrapper">
+
+                    <button class="mobile-menu-button" type="button" id="mobileMenuButton">
+                         ☰
+                     </button>
+
+                    <div class="mobile-dropdown" id="mobileDropdown">
+
+                    <form method="POST" action="/logout">
+                         @csrf
+
+                        <button type="submit" class="mobile-logout-button">
+                            <span>↪</span>
+                                Logout
+                        </button>
+                    </form>
+
+                </div>
+
+</div>
 
                 <div class="header-title">
                     <p>ADMINISTRATION</p>
@@ -121,7 +127,7 @@
                             <div class="stat-icon">▣</div>
                         </div>
 
-                        <strong>24</strong>
+                        <strong>{{ $products->count() }}</strong>
 
                         <p>Products in your store</p>
 
@@ -135,7 +141,7 @@
                             <div class="stat-icon">◫</div>
                         </div>
 
-                        <strong>8</strong>
+                        <strong>{{ $categories->count() }}</strong>
 
                         <p>Product categories</p>
 
@@ -176,7 +182,7 @@
                         </a>
 
 
-                        <a href="#" class="action-card">
+                        <a href="/admin/products" class="action-card">
 
                             <div class="action-icon">
                                 ▣
@@ -193,39 +199,10 @@
                         </a>
 
 
-                        <a href="#" class="action-card">
-
-                            <div class="action-icon">
-                                +
-                            </div>
-
-                            <div class="action-content">
-                                <span>CATEGORIES</span>
-                                <h4>Add Category</h4>
-                                <p>Create a new product category.</p>
-                            </div>
-
-                            <span class="action-arrow">→</span>
-
-                        </a>
+                       
 
 
-                        <a href="#" class="action-card">
-
-                            <div class="action-icon">
-                                ◫
-                            </div>
-
-                            <div class="action-content">
-                                <span>CATEGORIES</span>
-                                <h4>View Categories</h4>
-                                <p>View and manage your categories.</p>
-                            </div>
-
-                            <span class="action-arrow">→</span>
-
-                        </a>
-
+                       
                     </div>
 
                 </section>
@@ -235,6 +212,6 @@
         </main>
 
     </div>
-
+ @vite('resources/js/admin/dashboard.js')
 </body>
 </html>
