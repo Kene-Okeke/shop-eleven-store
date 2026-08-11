@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.mobile-logout-button {
+    display: none;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--background);
