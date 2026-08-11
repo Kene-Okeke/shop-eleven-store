@@ -101,5 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             renderProducts(products.data, productList);
         });
+
+        searchInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+            }
+        });
     });
 });
