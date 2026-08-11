@@ -64,7 +64,7 @@ a {
 .hero {
     height: 750px; /* Fixed height */
     /* Full width of container */
-    background-image: url("/images/hero.jpg");
+    background-image: url("/images/hero.JPG");
     background-size: cover;
     background-position: center;
     border-radius: 20px; /* Rounded corners */
