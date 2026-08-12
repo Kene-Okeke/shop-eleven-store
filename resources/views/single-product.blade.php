@@ -154,7 +154,7 @@
             <div class="Description-and-Fit">
 
                 <h1 class="title">Description & Fit</h1>
-                <img src="/images/slide-up-arrow.png" alt="slide-up-arrow">
+                <img src="/images/slide-up-arrow.png" alt="slide-up-arrow" style=" display: none;">
 
             </div>
 
