@@ -184,7 +184,7 @@
 
                     <div class="discount-text">
                         <h3>Discount</h3>
-                        <h4>Disc 50%</h4>
+                        <h4>50% Off</h4>
                         
                     </div>
 
@@ -229,8 +229,8 @@
                     </div>
 
                     <div class="estimation-text">
-                        <h3>Estimation Arrive</h3>
-                        <h4>10 -12 October 2024</h4>   
+                        <h3>Estimated Delivery</h3>
+                        <h4>1 - 3 business days</h4>   
                     </div>
 
 
