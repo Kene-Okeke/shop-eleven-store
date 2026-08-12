@@ -23,12 +23,13 @@
                 <h1 class="shop-eleven-text">ShopEleven</h1>
 
             </div>
-
-            <div class="menu-box">
-                <a href="/">
-                    <img src="/images/buy.png" alt="menu-icon" class="menu-bar">
-                </a>
-            </div>
+            <a href="/">
+                <div class="menu-box">
+             
+                        <img src="/images/buy.png" alt="menu-icon" class="menu-bar">
+               
+                </div>
+             </a>
 
 
         </nav>
