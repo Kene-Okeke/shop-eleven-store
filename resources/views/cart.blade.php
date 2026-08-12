@@ -25,8 +25,9 @@
             </div>
 
             <div class="menu-box">
-                <span class="menu-text">Menu</span>
-                <img src="/images/menu-bar.png" alt="menu-icon" class="menu-bar">
+                <a href="/">
+                    <img src="/images/buy.png" alt="menu-icon" class="menu-bar">
+                </a>
             </div>
 
 
@@ -69,7 +70,7 @@
             class="{{ request()->is('shop') ? 'active' : ''}}">
                 Shop</a>
             <hr>
-            <a href="#popular"
+            <a href="{{ url('/') }}#popular"
               class="{{ request()->is('') ? 'active' : ''}}">
             Popular</a>
             <hr>

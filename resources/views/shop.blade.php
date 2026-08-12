@@ -132,7 +132,7 @@
             class="{{ request()->is('shop') ? 'active' : ''}}">
                 Shop</a>
             <hr>
-            <a href="#popular"
+            <a href="/#popular"
               class="{{ request()->is('') ? 'active' : ''}}">
             Popular</a>
             <hr>
