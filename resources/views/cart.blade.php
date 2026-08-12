@@ -25,10 +25,12 @@
             </div>
           
                 <div class="menu-box">
-                      <a href="/">
-                        <img src="/images/buy.png" alt="menu-icon" class="menu-bar">
-                      </a> 
+                     <a href="/" class="home-bar">
+                        <img src="/images/buy.png" alt="menu-icon">
+                    </a>
                 </div>
+                
+            </div>
             
 
 
@@ -202,17 +204,17 @@
 
             <div class="footer-column-d">
 
-                <h2 style="font-size:24px; padding-bottom:7px; margin-top:7px;">
-                     <a href="/shop">Shop with us</a>
-                 </h2>
-7
-                <p style="padding-top:10px; padding-bottom:15px;">
+                <h2>
+                    <a href="/shop">Shop with us</a>
+                </h2>
+
+                <p>
                     Find something you love?
-                    <br>
+                <br>
                     Place your order with us on WhatsApp.
                 </p>
 
-                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:purple; margin-left:-5px; font-size:18px">
+                <a href="https://wa.me/233592128637" class="footer-whatsapp">
                     Order on WhatsApp
                 </a>
 

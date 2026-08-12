@@ -4,6 +4,57 @@
     box-sizing: border-box;
 }
 
+.home-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.home-bar img {
+    display: block;
+    width: 20px;
+    height: 30px;
+    padding-top: 5px;
+    max-width: none;
+}
+
+.footer-column-d {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 280px;
+}
+
+.footer-column-d h2 {
+    font-size: 24px;
+    margin: 7px 0 12px 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.footer-column-d h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-column-d p {
+    margin: 0 0 15px 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.footer-column-d .footer-whatsapp {
+    display: inline-block;
+    margin: 0;
+    font-size: 18px;
+    color: purple;
+    text-decoration: none;
+}
+
 .footer-section-mobile {
     display: none;
 }
