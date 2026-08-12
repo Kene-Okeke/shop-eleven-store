@@ -29,7 +29,7 @@
                         <img src="/images/buy.png" alt="menu-icon">
                     </a>
                 </div>
-                
+
             </div>
             
 
@@ -211,7 +211,7 @@
                 <p>
                     Find something you love?
                 <br>
-                    Place your order with us on WhatsApp.
+                Place your order with us on WhatsApp.
                 </p>
 
                 <a href="https://wa.me/233592128637" class="footer-whatsapp">
