@@ -202,17 +202,17 @@
 
             <div class="footer-column-d">
 
-                <h2 style="font-size:27px; padding-bottom:12px;">
+                <h2 style="font-size:24px; padding-bottom:7px; margin-top:7px;">
                      <a href="/shop">Shop with us</a>
                  </h2>
-
+7
                 <p style="padding-top:10px; padding-bottom:15px;">
                     Find something you love?
                     <br>
                     Place your order with us on WhatsApp.
                 </p>
 
-                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:purple">
+                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:purple; margin-left:-5px; font-size:18px">
                     Order on WhatsApp
                 </a>
 
