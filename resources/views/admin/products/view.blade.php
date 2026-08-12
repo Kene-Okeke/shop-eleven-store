@@ -111,7 +111,7 @@
 
                                 <!-- PRICE -->
                                 <td class="product-price">
-                                    ₦{{ number_format($product->price, 2) }}
+                                    GH₵{{ number_format($product->price, 2) }}
                                 </td>
 
 
