@@ -23,13 +23,13 @@
                 <h1 class="shop-eleven-text">ShopEleven</h1>
 
             </div>
-            <a href="/">
+          
                 <div class="menu-box">
-             
+                      <a href="/">
                         <img src="/images/buy.png" alt="menu-icon" class="menu-bar">
-               
+                      </a> 
                 </div>
-             </a>
+            
 
 
         </nav>
@@ -201,14 +201,20 @@
             </div>
 
             <div class="footer-column-d">
-                <h2 style="font-size:27px; font-weight:lighter; padding-bottom:12px; padding-top:11px;"> Subscribe to our newsletter</h2>
 
-                <form class="subscribe">
-                    <input type="email" placeholder="Email">
-                    <button type="submit">Subscribe</button>
-                </form>
+                <h2 style="font-size:27px; padding-bottom:12px;">
+                     <a href="/shop">Shop with us</a>
+                 </h2>
 
-                <p style="padding-top:20px; ">Subscribe to our newsletter to be the first to know <br> about news and offers</p>
+                <p style="padding-top:10px; padding-bottom:15px;">
+                    Find something you love?
+                    <br>
+                    Place your order with us on WhatsApp.
+                </p>
+
+                <a href="https://wa.me/233592128637" class="footer-whatsapp" style="color:purple">
+                    Order on WhatsApp
+                </a>
 
             </div>
 
