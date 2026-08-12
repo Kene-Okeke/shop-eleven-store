@@ -170,7 +170,7 @@
             <div class="Shipping-and-arrow">
 
                 <h1 class="shipping-text">Shipping</h1>
-                <img src="/images/slide-up-arrow.png"alt="slide-up-arrow">
+                <img src="/images/slide-up-arrow.png"alt="slide-up-arrow" style=" display: none;">
 
             </div>
 
