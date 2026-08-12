@@ -42,6 +42,8 @@ function attachDeleteListeners() {
         const cartTotals = renderCart();
 
         renderOrderSummary(cartTotals.totalPrice, cartTotals.totalQuantity);
+
+        attachCheckoutListener();
     });
 }
 function attachQuantityListeners() {
@@ -85,6 +87,8 @@ function attachQuantityListeners() {
         const cartTotals = renderCart();
 
         renderOrderSummary(cartTotals.totalPrice, cartTotals.totalQuantity);
+
+        attachCheckoutListener();
     });
 }
 function renderOrderSummary(totalPrice, totalQuantity) {
