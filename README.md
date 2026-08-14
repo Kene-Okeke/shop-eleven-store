@@ -2,118 +2,94 @@
 
 A full-stack e-commerce platform built with Laravel, PHP, MySQL, JavaScript, and Blade.
 
-Shop Eleven is a production-oriented commerce application designed to handle product discovery, cart management, order processing, administration, and WhatsApp-based checkout from a single platform.
+Shop Eleven is a production-oriented commerce application with a customer storefront and authenticated administration dashboard for managing products, categories, carts, orders, and store operations.
 
-## Overview
+## The Story
 
-Shop Eleven was built to provide a complete e-commerce workflow while keeping the architecture simple, maintainable, and scalable.
+Shop Eleven was built to solve a real business problem.
 
-The application includes both a customer-facing storefront and an authenticated administration dashboard for managing products, categories, orders, and store operations.
+The client was managing her products, customer orders, and day-to-day sales operations through a combination of manual processes and messaging. This made it difficult to keep track of products, manage customer orders efficiently, and maintain an organized sales workflow.
 
-## Features
+She reached out to me to build a more structured solution.
+
+I designed and developed Shop Eleven as a full-stack e-commerce platform that brought the storefront and store management workflow into one system.
+
+Customers can browse products, search and filter the catalogue, manage their carts, and submit orders through WhatsApp. On the administrative side, the client has an authenticated dashboard for managing products, categories, and orders.
+
+The result is a more organized digital workflow for managing the business while providing customers with a smoother way to discover products and place orders.
+
+## Key Features
 
 - 🛒 Product browsing and cart management
 - 🔎 Dynamic product search and category filtering
 - 📦 Product, category, and order management
-- 🔐 Authenticated admin dashboard
-- 📱 Responsive storefront for desktop, tablet, and mobile
+- 🔐 Authenticated administration dashboard
+- 📱 Responsive desktop, tablet, and mobile experience
 - 💬 WhatsApp-based checkout and order communication
 - 🖼️ Cloudinary-powered product image management
 - 🔌 RESTful API endpoints for dynamic product filtering
-- 🗄️ Relational database architecture using MySQL
-- 🚀 Production deployment and database configuration
-- 🔍 SEO foundations and sitemap generation
+- 🗄️ Relational MySQL database architecture
+- 🚀 Production deployment and infrastructure management
+- 🔍 Sitemap generation and SEO foundations
 
 ## Technology Stack
 
-**Backend**
+### Backend
+
 - PHP 8+
 - Laravel
 - MySQL
 - RESTful APIs
 
-**Frontend**
+### Frontend
+
 - Blade
 - JavaScript
 - HTML5
 - CSS3
 - Responsive design
 
-**Infrastructure & Services**
+### Services & Tools
+
 - Cloudinary
-- MySQL
 - Git & GitHub
 
-## Architecture
+## Engineering Highlights
 
-Shop Eleven follows a Laravel-based full-stack architecture where the application handles:
+### Full-Stack Laravel Architecture
 
-- Business logic
-- Database interactions
-- Authentication and authorization
-- Product and order management
-- API endpoints
-- Server-rendered Blade views
+Built both the customer-facing storefront and authenticated administration dashboard within a Laravel-based application architecture.
 
-JavaScript is used where client-side interaction improves the user experience, including product filtering, search, cart functionality, and dynamic interface behaviour.
+The application handles business logic, database interactions, authentication, product management, cart functionality, order workflows, and API endpoints.
 
-## Key Engineering Decisions
+### API-Driven Product Filtering
 
-### API-driven product filtering
+Implemented Laravel API endpoints for dynamic product filtering and search, allowing product results to be retrieved and rendered without requiring a complete page reload.
 
-Product filtering and search are handled through Laravel API endpoints, allowing products to be retrieved dynamically without requiring a complete page reload.
+### Relational Database Design
 
-### Relational data modeling
+Designed a MySQL-backed data model for products, categories, users, carts, and orders, with relationships structured around the application's commerce workflows.
 
-The application uses a relational MySQL database to model relationships between products, categories, users, carts, and orders.
+### Responsive Commerce Experience
 
-### Responsive commerce experience
+Built responsive shopping interfaces across desktop, tablet, and mobile devices, including mobile-first navigation, filtering, search, and cart functionality.
 
-The storefront was designed across desktop, tablet, and mobile breakpoints, including a mobile-first navigation and cart experience.
+### WhatsApp Checkout Integration
 
-### WhatsApp checkout
+Integrated WhatsApp into the purchasing workflow, allowing customers to send order information directly to the business for order communication and fulfillment.
 
-Instead of relying exclusively on a traditional payment checkout flow, Shop Eleven integrates WhatsApp into the purchasing workflow, allowing customers to communicate order details directly with the business.
+### Cloud-Based Media Management
 
-### Cloud-based media management
+Integrated Cloudinary for product image management and media delivery rather than relying exclusively on local server storage.
 
-Product images are managed through Cloudinary rather than being stored directly on the application server.
+## Production
 
-## Screenshots
+Shop Eleven was developed and deployed as a complete e-commerce application, including storefront functionality, administration, database infrastructure, deployment, and production troubleshooting.
 
-### Storefront
+The project also involved troubleshooting production infrastructure issues involving the application server and hosted MySQL database.
 
-_Add screenshots of the customer-facing storefront here._
+## Portfolio
 
-### Admin Dashboard
+For the complete case study, including screenshots, architecture, features, challenges, and project details:
 
-_Add screenshots of the authenticated admin dashboard here._
-
-### Product Management
-
-_Add screenshots of the product management interface here._
-
-### Mobile Experience
-
-_Add mobile screenshots here._
-
-## Project Structure
-
-```text
-shop-eleven-store/
-├── app/
-├── bootstrap/
-├── config/
-├── database/
-├── public/
-├── resources/
-│   ├── css/
-│   ├── js/
-│   └── views/
-├── routes/
-├── storage/
-├── tests/
-├── .env.example
-├── artisan
-├── composer.json
-└── package.json
+**[View Shop Eleven Case Study](https://kenesportfolio.vercel.app/)**
