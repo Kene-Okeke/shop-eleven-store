@@ -92,4 +92,4 @@ The project also involved troubleshooting production infrastructure issues invol
 
 For the complete case study, including screenshots, architecture, features, challenges, and project details:
 
-**[View Shop Eleven Case Study](https://kenesportfolio.vercel.app/)**
+**[View Shop Eleven Case Study](https://kenesportfolio.vercel.app/projects/shop-eleven)**
