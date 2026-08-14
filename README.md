@@ -1,58 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Shop Eleven
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-stack e-commerce platform built with Laravel, PHP, MySQL, JavaScript, and Blade.
 
-## About Laravel
+Shop Eleven is a production-oriented commerce application designed to handle product discovery, cart management, order processing, administration, and WhatsApp-based checkout from a single platform.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Shop Eleven was built to provide a complete e-commerce workflow while keeping the architecture simple, maintainable, and scalable.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The application includes both a customer-facing storefront and an authenticated administration dashboard for managing products, categories, orders, and store operations.
 
-## Learning Laravel
+## Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 🛒 Product browsing and cart management
+- 🔎 Dynamic product search and category filtering
+- 📦 Product, category, and order management
+- 🔐 Authenticated admin dashboard
+- 📱 Responsive storefront for desktop, tablet, and mobile
+- 💬 WhatsApp-based checkout and order communication
+- 🖼️ Cloudinary-powered product image management
+- 🔌 RESTful API endpoints for dynamic product filtering
+- 🗄️ Relational database architecture using MySQL
+- 🚀 Production deployment and database configuration
+- 🔍 SEO foundations and sitemap generation
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technology Stack
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+**Backend**
+- PHP 8+
+- Laravel
+- MySQL
+- RESTful APIs
 
-## Agentic Development
+**Frontend**
+- Blade
+- JavaScript
+- HTML5
+- CSS3
+- Responsive design
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+**Infrastructure & Services**
+- Cloudinary
+- MySQL
+- Git & GitHub
 
-```bash
-composer require laravel/boost --dev
+## Architecture
 
-php artisan boost:install
-```
+Shop Eleven follows a Laravel-based full-stack architecture where the application handles:
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+- Business logic
+- Database interactions
+- Authentication and authorization
+- Product and order management
+- API endpoints
+- Server-rendered Blade views
 
-## Contributing
+JavaScript is used where client-side interaction improves the user experience, including product filtering, search, cart functionality, and dynamic interface behaviour.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Key Engineering Decisions
 
-## Code of Conduct
+### API-driven product filtering
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Product filtering and search are handled through Laravel API endpoints, allowing products to be retrieved dynamically without requiring a complete page reload.
 
-## Security Vulnerabilities
+### Relational data modeling
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The application uses a relational MySQL database to model relationships between products, categories, users, carts, and orders.
 
-## License
+### Responsive commerce experience
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The storefront was designed across desktop, tablet, and mobile breakpoints, including a mobile-first navigation and cart experience.
+
+### WhatsApp checkout
+
+Instead of relying exclusively on a traditional payment checkout flow, Shop Eleven integrates WhatsApp into the purchasing workflow, allowing customers to communicate order details directly with the business.
+
+### Cloud-based media management
+
+Product images are managed through Cloudinary rather than being stored directly on the application server.
+
+## Screenshots
+
+### Storefront
+
+_Add screenshots of the customer-facing storefront here._
+
+### Admin Dashboard
+
+_Add screenshots of the authenticated admin dashboard here._
+
+### Product Management
+
+_Add screenshots of the product management interface here._
+
+### Mobile Experience
+
+_Add mobile screenshots here._
+
+## Project Structure
+
+```text
+shop-eleven-store/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+├── routes/
+├── storage/
+├── tests/
+├── .env.example
+├── artisan
+├── composer.json
+└── package.json
